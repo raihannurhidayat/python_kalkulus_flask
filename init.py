@@ -11,6 +11,10 @@ app = Flask(__name__)
 def hello():
     return render_template('home.html')
 
+@app.route('/graph')
+def graph():
+    return render_template('graph.html')
+
 @app.route('/linear', methods = ['GET','POST'])
 def linear():
     if request.method == 'POST':
@@ -23,6 +27,8 @@ def linear():
 
         x1 = -b/a
         y1 = b
+
+        data = [x1, y1]
 
         plt.plot(x,y, "r")
         plt.plot(x1, 0, "k*", label=f"Titik Potong Sumbu x ")
@@ -44,7 +50,7 @@ def linear():
         plt.legend()
         plt.savefig(f'static/my_plot.png')
         plt.clf()
-        return render_template('linear.html', plot_url=f'static/my_plot.png')
+        return render_template('linear.html', plot_url=f'static/my_plot.png', data = data)
     else:
         return render_template('linear.html')
 
@@ -86,6 +92,8 @@ def kuadrat():
         y0 = 0
         y1 = 0
 
+        data = [x1,x2,ty,xm,ym]
+
         plt.plot(x,y, "r")
         plt.plot([x1, x2], [y0, y1], "k*", label="Titik Potong Sumbu x")
         plt.plot(0, ty, "c*", label="Titik Potong Sumbu y")
@@ -108,7 +116,7 @@ def kuadrat():
         plt.legend()
         plt.savefig('static/kuadrat.png')
         plt.clf()
-        return render_template('kuadrat.html', plot_url='static/kuadrat.png')
+        return render_template('kuadrat.html', plot_url='static/kuadrat.png', data = data)
     else:
         return render_template('kuadrat.html')
     

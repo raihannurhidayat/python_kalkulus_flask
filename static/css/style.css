@@ -1,6 +1,11 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 a {
@@ -8,42 +13,307 @@ a {
     color: black;
 }
 
-.navbar {
-    background: radial-gradient(9917.17% 140.83% at 0.83% 0%, rgba(255, 229, 162, 0.70) 0%, rgba(252, 255, 108, 0.15) 100%);
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
-    height: 60px;
+/* navbar style start */
+
+header {
+    background-color: #fff;
+}
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 18px;
+    padding-right: 60px;
+    padding-left: 60px;
+    /* position: fixed;
+    width: 90%; */
+
+    /* overflow: hidden;
+    top: 0;
+    z-index: 1; */
 }
 
-.icon {
+.logo img {
+    width: 240px;
+    height: 49px;
+}
+
+.option-navbar-section ul {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.option-navbar-section ul li {
+    list-style: none;
+}
+
+.option-navbar-section ul li a {
+    font-size: 20px;
+}
+
+.option-navbar-section ul li a:hover {
+    color: #F60;
+    transition: .2s ease-in-out;
+}
+
+/* navbar style end */
+
+/*? hero section style start */
+
+.wrap {
+    margin-right: 135px;
+    margin-left: 135px;
+}
+
+.hero-section {
+    height: 76vh;
+    margin-bottom: 40px;
     display: flex;
     align-items: center;
-    margin-left: 120px;
+    justify-content: space-evenly;
+    /* margin-top: 120px; */
 }
 
-.icon a {
-    color: rgb(255, 0, 0);
+.hero-text {
+    width: 50%;
 }
 
-.option-navbar {
-    margin-right: 120px;
+.hero-text h1 {
+    color: #0B1B35;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 850;
+    line-height: 81px;
+    margin-bottom: 12px;
 }
 
-.option-navbar ul {
+.hero-text p {
+    color: #000;
+    font-family: Ageo;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28.5px;
+    margin-bottom: 42px;
+    /* 129.545% */
+}
+
+.button-text {
+    border-radius: 10px;
+    background: #F60;
+    padding: 12px 18px;
+    border: none;
+}
+
+.hero-image {
+    width: 50%;
+}
+
+.hero-image img {
+    width: 120px;
+    height: 120px;
+}
+
+/*? hero section style end */
+
+/*? service section style start */
+.service-section {
+    margin-top: 24px;
+    height: 100vh;
+    padding-bottom: 32px;
+}
+
+.service-section p {
+    color: #8A898E;
+    text-align: center;
+    margin-bottom: 24px;
+    font-family: Ageo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28.5px;
+    /* 203.571% */
+    letter-spacing: 6.3px;
+}
+
+.service-section h1 {
+    color: #0B1B35;
+    text-align: center;
+    font-family: Ageo;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28.5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    /* 54.808% */
+}
+
+.wrap-service {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.service-option {
+    margin-top: 24px;
+    width: 330px;
+    border-radius: 28px;
+    background: #FFF;
+    box-shadow: 0px 2.76726px 2.21381px 0px rgba(0, 0, 0, 0.02), 0px 6.6501px 5.32008px 0px rgba(0, 0, 0, 0.03), 0px 12.52155px 10.01724px 0px rgba(0, 0, 0, 0.04), 0px 22.33631px 17.86905px 0px rgba(0, 0, 0, 0.04), 0px 41.77761px 33.42209px 0px rgba(0, 0, 0, 0.05), 0px 100px 80px 0px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 12px;
+    margin-bottom: 120px;
+}
+
+.svg-style {
+    width: 76.469px;
+    height: 76.47px;
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
+
+.service-option h1 {
+    color: #000;
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28.5px;
+    margin-bottom: 48px;
+    /* 79.167% */
+}
+
+.service-option h5 {
+    color: #000;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28.5px;
+    /* 158.333% */
+}
+
+.button-service {
+    margin-top: 60px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    background: rgb(255, 111, 0);
+    padding: 12px 18px;
+    border: none;
+}
+
+/*? service section style end */
+
+
+/*! our team section style start */
+
+.team-section {
+    margin-top: 32px;
+    height: 100vh;
+    margin-bottom: 24px;
+}
+
+.team-section p {
+    color: #8A898E;
+    text-align: center;
+    font-family: Ageo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28.5px;
+    letter-spacing: 6.3px;
+    padding-bottom: 32px;
+}
+
+.team-section h1 {
+    color: #0B1B35;
+    text-align: center;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28.5px;
+}
+
+.personal-section {
+    margin-top: 32px;
     display: flex;
     gap: 12px;
 }
 
-.option-navbar ul li {
-    list-style: none;
+.personal {
+    width: 370px;
+    height: 370px;
+    background-color: #EBEAED;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0px 2.76726px 2.21381px 0px rgba(0, 0, 0, 0.02), 0px 6.6501px 5.32008px 0px rgba(0, 0, 0, 0.03), 0px 12.52155px 10.01724px 0px rgba(0, 0, 0, 0.04), 0px 22.33631px 17.86905px 0px rgba(0, 0, 0, 0.04), 0px 41.77761px 33.42209px 0px rgba(0, 0, 0, 0.05), 0px 100px 80px 0px rgba(0, 0, 0, 0.07);
 }
 
-.option-navbar ul li a {
-    color:#F95C19;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
+.personal img {
+    width: 120px;
+    height: 120px;
+    margin-top: 32px;
 }
+
+.personal h2 {
+    color: #1E0E62;
+    margin: 12px 0;
+    /* Heading / H5 Lead */
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    /* 145.455% */
+}
+
+.personal h4 {
+    color: var(--colors-text, rgba(21, 20, 57, 0.40));
+    text-align: center;
+    /* Text / Label */
+    font-family: DM Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    /* 185.714% */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
+
+.social {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social img {
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px;
+    /* 172.727% */
+}
+
+.social img:hover {
+    background-color: #fff;
+    /* padding: 12px ; */
+    border-radius: 50%;
+}
+
+
+/*! our team section style start */
+

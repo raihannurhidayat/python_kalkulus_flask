@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="">
+            </div>
+            <div class="option-navbar-section">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/linear">Linear</a></li>
+                    <li><a href="/kuadrat">Kuadrat</a></li>
+                    <li><a href="/graph">Calculator Graph</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+  <h1 style="text-align: center; margin: 32px 0;">Write Your Graph</h1>
+  <div style="display: flex; align-items: center; justify-content: center; align-self: center;">
+    <div id="calculator" style="width: 900px; height: 400px;"></div>
+  </div>
+  <script src="https://www.desmos.com/api/v1.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+  <script>
+    let elt = document.getElementById('calculator');
+    let calculator = Desmos.GraphingCalculator(elt);
+  </script>
+</body>
+
+</html>

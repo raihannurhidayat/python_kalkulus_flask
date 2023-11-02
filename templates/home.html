@@ -4,65 +4,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Project Kalkulus</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
+    <!-- navbar start -->
 
-    <nav class="navbar">
-        <div class="icon">
-            <svg width="39" height="37" viewBox="0 0 39 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="39" height="37" fill="#E5E5E5" />
-                <g clip-path="url(#clip0_0_1)">
-                    <rect width="1920" height="80" transform="translate(-294 -15)" fill="white" />
-                    <g filter="url(#filter0_d_0_1)">
-                        <rect x="-294" y="-15" width="1920" height="80" fill="url(#paint0_radial_0_1)"
-                            shape-rendering="crispEdges" />
-                    </g>
-                    <path
-                        d="M18.5772 36.0748L31.7843 26.9561C32.5883 26.4 33.0372 25.5018 33.0502 24.5846L33.1986 15.6175C33.2197 14.341 32.4417 13.1924 31.2565 12.7505L22.9304 9.64593C22.0795 9.32635 21.0885 9.42425 20.2846 9.9804L7.09391 19.1233L18.6431 23.5815L18.5772 36.0748Z"
-                        fill="#F95C19" />
-                    <path
-                        d="M20.5266 9.74233L7.24176 18.9146C6.4331 19.4741 5.98158 20.3775 5.96846 21.3002L5.81896 30.3325C5.79783 31.609 6.5759 32.7576 7.76111 33.1995L16.1478 36.3267C17.0037 36.6481 18.0005 36.5497 18.8092 35.9902L32.0774 26.7935L22.382 23.0509C21.2251 22.6044 20.4647 21.4818 20.4713 20.2303L20.5266 9.74233Z"
-                        fill="#CA3E02" />
-                </g>
-                <defs>
-                    <filter id="filter0_d_0_1" x="-314" y="-35" width="1960" height="120" filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                            result="hardAlpha" />
-                        <feOffset />
-                        <feGaussianBlur stdDeviation="10" />
-                        <feComposite in2="hardAlpha" operator="out" />
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0" />
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1" />
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape" />
-                    </filter>
-                    <radialGradient id="paint0_radial_0_1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-                        gradientTransform="translate(-278 -15.0003) rotate(2.40597) scale(1905.68 8006.94)">
-                        <stop stop-color="#FFE5A2" stop-opacity="0.7" />
-                        <stop offset="1" stop-color="#FCFF6C" stop-opacity="0.15" />
-                    </radialGradient>
-                    <clipPath id="clip0_0_1">
-                        <rect width="1920" height="80" fill="white" transform="translate(-294 -15)" />
-                    </clipPath>
-                </defs>
-            </svg>
-            <a href="/">MathPlot</a>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="">
+            </div>
+            <div class="option-navbar-section">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- navbar end -->
+
+    <!-- hero section start -->
+    <section class="hero-section wrap" id="home">
+        <div class="hero-text">
+            <h1>
+                We Solved your Problem Math in Graph
+            </h1>
+            <p>
+                Our goal is solve your problem math in grap and easy to access and also easy to used
+            </p>
+            <button class="button-text">Get Started</button>
         </div>
-        <div class="option-navbar">
-            <ul>
-                <li><a href="/linear">Linear</a></li>
-                <li><a href="/kuadrat">Kuadrat</a></li>
-            </ul>
+        <div class="hero-img">
+            <img src="{{ url_for('static', filename='img/hero-image.png') }}" width="506px" alt="">
         </div>
-    </nav>
+    </section>
+    <!-- hero section end -->
 
+    <!-- service section start -->
+    <section class="service-section wrap" id="service">
+        <p>
+            Service
+        </p>
+        <h1>
+            Solve Your Problem Graph Math Now !
+        </h1>
+        <div class="wrap-service">
+            <div class="service-option">
+                <svg class="svg-style" xmlns="http://www.w3.org/2000/svg" width="77" height="77" viewBox="0 0 77 77"
+                    fill="none">
+                    <path
+                        d="M51.4251 7.337C51.2722 8.29286 51.1957 9.24872 51.1957 10.2046C51.1957 18.8073 58.1543 25.7621 66.7188 25.7621C67.6747 25.7621 68.5923 25.6512 69.5482 25.4983V56.3495C69.5482 69.3148 61.9013 76.9999 48.9016 76.9999H20.6503C7.64686 76.9999 0 69.3148 0 56.3495V28.06C0 15.0603 7.64686 7.337 20.6503 7.337H51.4251ZM52.1936 30.5834C51.1575 30.4687 50.129 30.9276 49.5134 31.7687L40.2645 43.736L29.6698 35.401C29.0198 34.9039 28.2551 34.7089 27.4904 34.7892C26.7296 34.9039 26.0414 35.3207 25.5787 35.9324L14.2652 50.6564L14.032 51.0006C13.382 52.2202 13.6879 53.7878 14.8349 54.6328C15.3702 54.9769 15.9437 55.2063 16.5937 55.2063C17.4769 55.2446 18.3142 54.7819 18.8495 54.0593L28.4463 41.7058L39.3431 49.8918L39.6872 50.1173C40.9107 50.7673 42.4401 50.4653 43.3194 49.3144L54.3691 35.0569L54.2162 35.1333C54.828 34.2922 54.9427 33.2216 54.5221 32.2658C54.1053 31.3099 53.1839 30.6599 52.1936 30.5834ZM67.2545 0.530151C72.3396 0.530151 76.4689 4.65945 76.4689 9.74461C76.4689 14.8298 72.3396 18.9591 67.2545 18.9591C62.1693 18.9591 58.04 14.8298 58.04 9.74461C58.04 4.65945 62.1693 0.530151 67.2545 0.530151Z"
+                        fill="black" />
+                </svg>
+                <h1>
+                    Fungsi Linear
+                </h1>
+                <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique dolore sint quisquam optio odit,
+                    assumenda quasi quo voluptates culpa alias!</h5>
+                <a href="/linear" class="button-service">Get Started</a>
+            </div>
+            <div class="service-option">
+                <svg class="svg-style" xmlns="http://www.w3.org/2000/svg" width="77" height="77" viewBox="0 0 77 77"
+                    fill="none">
+                    <path
+                        d="M51.4251 7.337C51.2722 8.29286 51.1957 9.24872 51.1957 10.2046C51.1957 18.8073 58.1543 25.7621 66.7188 25.7621C67.6747 25.7621 68.5923 25.6512 69.5482 25.4983V56.3495C69.5482 69.3148 61.9013 76.9999 48.9016 76.9999H20.6503C7.64686 76.9999 0 69.3148 0 56.3495V28.06C0 15.0603 7.64686 7.337 20.6503 7.337H51.4251ZM52.1936 30.5834C51.1575 30.4687 50.129 30.9276 49.5134 31.7687L40.2645 43.736L29.6698 35.401C29.0198 34.9039 28.2551 34.7089 27.4904 34.7892C26.7296 34.9039 26.0414 35.3207 25.5787 35.9324L14.2652 50.6564L14.032 51.0006C13.382 52.2202 13.6879 53.7878 14.8349 54.6328C15.3702 54.9769 15.9437 55.2063 16.5937 55.2063C17.4769 55.2446 18.3142 54.7819 18.8495 54.0593L28.4463 41.7058L39.3431 49.8918L39.6872 50.1173C40.9107 50.7673 42.4401 50.4653 43.3194 49.3144L54.3691 35.0569L54.2162 35.1333C54.828 34.2922 54.9427 33.2216 54.5221 32.2658C54.1053 31.3099 53.1839 30.6599 52.1936 30.5834ZM67.2545 0.530151C72.3396 0.530151 76.4689 4.65945 76.4689 9.74461C76.4689 14.8298 72.3396 18.9591 67.2545 18.9591C62.1693 18.9591 58.04 14.8298 58.04 9.74461C58.04 4.65945 62.1693 0.530151 67.2545 0.530151Z"
+                        fill="black" />
+                </svg>
+                <h1>
+                    Fungsi Kuadrat
+                </h1>
+                <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique dolore sint quisquam optio odit,
+                    assumenda quasi quo voluptates culpa alias!</h5>
+                <a href="/kuadrat" class="button-service">Get Started</a>
+            </div>
+            <div class="service-option">
+                <svg class="svg-style" xmlns="http://www.w3.org/2000/svg" width="77" height="77" viewBox="0 0 77 77"
+                    fill="none">
+                    <path
+                        d="M51.4251 7.337C51.2722 8.29286 51.1957 9.24872 51.1957 10.2046C51.1957 18.8073 58.1543 25.7621 66.7188 25.7621C67.6747 25.7621 68.5923 25.6512 69.5482 25.4983V56.3495C69.5482 69.3148 61.9013 76.9999 48.9016 76.9999H20.6503C7.64686 76.9999 0 69.3148 0 56.3495V28.06C0 15.0603 7.64686 7.337 20.6503 7.337H51.4251ZM52.1936 30.5834C51.1575 30.4687 50.129 30.9276 49.5134 31.7687L40.2645 43.736L29.6698 35.401C29.0198 34.9039 28.2551 34.7089 27.4904 34.7892C26.7296 34.9039 26.0414 35.3207 25.5787 35.9324L14.2652 50.6564L14.032 51.0006C13.382 52.2202 13.6879 53.7878 14.8349 54.6328C15.3702 54.9769 15.9437 55.2063 16.5937 55.2063C17.4769 55.2446 18.3142 54.7819 18.8495 54.0593L28.4463 41.7058L39.3431 49.8918L39.6872 50.1173C40.9107 50.7673 42.4401 50.4653 43.3194 49.3144L54.3691 35.0569L54.2162 35.1333C54.828 34.2922 54.9427 33.2216 54.5221 32.2658C54.1053 31.3099 53.1839 30.6599 52.1936 30.5834ZM67.2545 0.530151C72.3396 0.530151 76.4689 4.65945 76.4689 9.74461C76.4689 14.8298 72.3396 18.9591 67.2545 18.9591C62.1693 18.9591 58.04 14.8298 58.04 9.74461C58.04 4.65945 62.1693 0.530151 67.2545 0.530151Z"
+                        fill="black" />
+                </svg>
+                <h1>
+                    Callulator Graph
+                </h1>
+                <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique dolore sint quisquam optio odit,
+                    assumenda quasi quo voluptates culpa alias!</h5>
+                <a href="/pages/callulator.html" class="button-service">Get Started</a>
+            </div>
+        </div>
+    </section>
+    <!-- service section end -->
 
+    <!-- our team start -->
+    <section class="team-section wrap" id="team">
+        <p>
+            OUR TEAM
+        </p>
+        <h1>Meet Our Team</h1>
+        <div class="personal-section">
+            <div class="personal">
+                <img src="{{ url_for('static', filename='img/Mask.png') }}" alt="">
+                <h2>Adam</h2>
+                <h4>
+                    Developer
+                </h4>
+                <div class="social">
+                    <img src="{{ url_for('static', filename='img/tw.png') }}" alt="">
+                    <img src="{{ url_for('static', filename='img/fb.png') }}" alt="">
+                </div>
+            </div>
+            <div class="personal">
+                <img src="{{ url_for('static', filename='img/Mask.png') }}" alt="">
+                <h2>El Gato</h2>
+                <h4>
+                    Developer
+                </h4>
+                <div class="social">
+                    <img src="{{ url_for('static', filename='img/tw.png') }}" alt="">
+                    <img src="{{ url_for('static', filename='img/fb.png') }}" alt="">
+                </div>
+            </div>
+            <div class="personal">
+                <img src="{{ url_for('static', filename='img/Mask.png') }}" alt="">
+                <h2>Wilson</h2>
+                <h4>
+                    Developer
+                </h4>
+                <div class="social">
+                    <img src="{{ url_for('static', filename='img/tw.png') }}" alt="">
+                    <img src="{{ url_for('static', filename='img/fb.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- our team end -->
 
-    hello
 </body>
 
 </html>
