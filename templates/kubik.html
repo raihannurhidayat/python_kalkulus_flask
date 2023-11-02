@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fungsi Linear</title>
+    <title>Fungsi Kuadrat</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
@@ -26,18 +26,21 @@
         </nav>
     </header>
     <!-- navbar end -->
-    <h1>Menggambar fungsi linear</h1>
-    <form action="/linear" method="POST" id="myForm" class="form-linear">
+    <h1>Menggambar fungsi kubik</h1>
+
+    <form action="/kubik" method="POST" id="myForm">
         Nilai a <input type="number" name="nilai_a" required>
         <br>
         Nilai b <input type="number" name="nilai_b" required>
+        <br>
+        Nilai c <input type="number" name="nilai_c" required>
+        <br>
+        Nilai d <input type="number" name="nilai_d" required>
         <br>
         <br>
         <input type="submit" value="OK">
         <input type="button" onclick="reset()" value="reset">
     </form>
-
-    <img src="{{ url_for('static', filename='img/fb.png') }}" alt="">
 
     {% if plot_url %}
     <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
@@ -46,15 +49,17 @@
     </div>
     {% endif %}
 
-    {% if data %}
-        <table>
-            <th>Titik Potong submu X</th>
-            <th>Titik Potong submu Y</th>
-            <tr>
-                <td>( {{data[0]}}, 0 )</td>
-                <td>( 0, {{data[1]}} )</td>
-            </tr>
-        </table>
+    {%if data%}
+    <table>
+        <th>Titik Potong submu X</th>
+        <th>Titik Potong submu Y</th>
+        <th>Titik Maksimum</th>
+        <tr>
+            <td>( {{data[0]}}, {{data[1]}})</td>
+            <td>( 0, {{data[2]}} )</td>
+            <td>( {{data[3]}}, {{data[4]}} )</td>
+        </tr>
+    </table>
     {%endif%}
 
     <script src="../js/script.js"></script>
