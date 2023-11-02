@@ -58,9 +58,9 @@ def linear():
 def kuadrat():
     if request.method == 'POST':
         plt.clf()
-        a = int(request.form['nilai_a'])
-        b = int(request.form['nilai_b'])
-        c = int(request.form['nilai_c'])
+        a = float(request.form['nilai_a'])
+        b = float(request.form['nilai_b'])
+        c = float(request.form['nilai_c'])
 
         def nilaiDeskriman(a, b, c): # <- menghitung nilai deskriminan
             deskriminan = b**2 - 4*a*c
