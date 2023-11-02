@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from flask import request
 from flask import Flask, render_template
+import cmath
 
 app = Flask(__name__)
 
@@ -119,6 +120,86 @@ def kuadrat():
         return render_template('kuadrat.html', plot_url='static/kuadrat.png', data = data)
     else:
         return render_template('kuadrat.html')
+
+
+@app.route('/kubik', methods = ['GET','POST'])
+def kubik():
+    if request.method == 'POST':
+        plt.clf()
+        a = float(request.form['nilai_a'])
+        b = float(request.form['nilai_b'])
+        c = float(request.form['nilai_c'])
+        d = float(request.form['nilai_d'])
+
+        def solve_cubic(a, b, c, d):
+            D = 18 * a * b * c * d - 4 * b**3 * d + b**2 * c**2 - 4 * a * c**3 - 27 * a**2 * d**2
+            
+            # Hitung koefisien p dan q
+            p = (3 * a * c - b**2) / (3 * a**2)
+            q = (2 * b**3 - 9 * a * b * c + 27 * a**2 * d) / (27 * a**3)
+            
+            # Hitung akar-akar persamaan kuadrat
+            discriminant = cmath.sqrt(q**2 / 4 + p**3 / 27)
+            u1 = -q / 2 + discriminant
+            u2 = -q / 2 - discriminant
+            
+            # Hitung akar-akar kubik
+            cube_root_u1 = u1**(1/3)
+            cube_root_u2 = u2**(1/3)
+            
+            # Hitung akar-akar persamaan kubik
+            x1 = cube_root_u1 + cube_root_u2 - b / (3 * a)
+            x2 = -(cube_root_u1 + cube_root_u2) / 2 - b / (3 * a) + 1j * cmath.sqrt(3) * (cube_root_u1 - cube_root_u2) / 2
+            x3 = -(cube_root_u1 + cube_root_u2) / 2 - b / (3 * a) - 1j * cmath.sqrt(3) * (cube_root_u1 - cube_root_u2) / 2
+
+            y1 = d
+            
+            return x1, x2, x3, y1
+
+        # Menggunakan fungsi untuk menyelesaikan persamaan kubik
+        # a = 1
+        # b = -2
+        # c = -1
+        # d = 2
+        # a = 1
+        # b = -6
+        # c = 11
+        # d = -6
+
+        akar1, akar2, akar3, y1 = solve_cubic(a, b, c, d)
+        print("Akar pertama:", akar1)
+        print("Akar kedua:", akar2)
+        print("Akar ketiga:", akar3)
+
+        x = np.arange(-10, 10, 0.01)
+        y = a*x**3 + b*x**2 + c*x + d
+
+        plt.plot(x, y)
+        plt.plot(akar1, 0, "k*", label=f"Titik Potong Sumbu x ")
+        plt.plot(akar2, 0, "k*",)
+        plt.plot(akar3, 0, "k*",)
+        plt.plot(0, y1, "g*", label="Titik Potong Sumbu y")
+        plt.plot()
+
+        plt.xlabel("sumbu x")
+        plt.ylabel("sumbu y")
+        plt.title(f"$y = {a}x^3 + {b}x^2 + {c}x + {d}$")
+        plt.xlim(-10, 10)
+        plt.ylim(-20, 20)
+        plt.grid()
+
+        ax = plt.gca()
+        ax.spines['left'].set_position(('data', 0))
+        ax.spines['bottom'].set_position(('data', 0))
+        ax.spines['right'].set_color('none')
+        ax.spines['top'].set_color('none')        
+        plt.legend()
+
+        plt.savefig('static/kubik.png')
+        plt.clf()
+        return render_template('kubik.html', plot_url='static/kubik.png')
+    else:
+        return render_template('kubik.html')
     
 app.secret_key = 'some secret'
 
