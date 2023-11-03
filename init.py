@@ -156,20 +156,12 @@ def kubik():
             
             return x1, x2, x3, y1
 
-        # Menggunakan fungsi untuk menyelesaikan persamaan kubik
-        # a = 1
-        # b = -2
-        # c = -1
-        # d = 2
-        # a = 1
-        # b = -6
-        # c = 11
-        # d = -6
-
         akar1, akar2, akar3, y1 = solve_cubic(a, b, c, d)
         print("Akar pertama:", akar1)
         print("Akar kedua:", akar2)
         print("Akar ketiga:", akar3)
+
+        data = [akar1, akar2, akar3, y1]
 
         x = np.arange(-10, 10, 0.01)
         y = a*x**3 + b*x**2 + c*x + d
@@ -197,7 +189,7 @@ def kubik():
 
         plt.savefig('static/kubik.png')
         plt.clf()
-        return render_template('kubik.html', plot_url='static/kubik.png')
+        return render_template('kubik.html', plot_url='static/kubik.png', data = data)
     else:
         return render_template('kubik.html')
     
