@@ -17,6 +17,7 @@ a {
 
 header {
     background-color: #fff;
+    margin-bottom: 90px;
 }
 
 nav {
@@ -26,12 +27,6 @@ nav {
     padding-top: 18px;
     padding-right: 60px;
     padding-left: 60px;
-    /* position: fixed;
-    width: 90%; */
-
-    /* overflow: hidden;
-    top: 0;
-    z-index: 1; */
 }
 
 .logo img {
@@ -68,7 +63,7 @@ nav {
 }
 
 .hero-section {
-    height: 76vh;
+    height: auto;
     margin-bottom: 40px;
     display: flex;
     align-items: center;
@@ -107,13 +102,12 @@ nav {
     border: none;
 }
 
-.hero-image {
+.hero-img {
     width: 50%;
 }
 
-.hero-image img {
-    width: 120px;
-    height: 120px;
+.hero-img img {
+    width: 500px;
 }
 
 /*? hero section style end */
@@ -121,7 +115,7 @@ nav {
 /*? service section style start */
 .service-section {
     margin-top: 24px;
-    height: 100vh;
+    height: auto;
     padding-bottom: 32px;
 }
 
@@ -215,14 +209,13 @@ nav {
 
 .team-section {
     margin-top: 32px;
-    height: 100vh;
+    height: auto;
     margin-bottom: 24px;
 }
 
 .team-section p {
     color: #8A898E;
     text-align: center;
-    font-family: Ageo;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -308,11 +301,6 @@ nav {
     /* 172.727% */
 }
 
-.social img:hover {
-    background-color: #fff;
-    /* padding: 12px ; */
-    border-radius: 50%;
-}
 
 /*! our team section style start */
 
