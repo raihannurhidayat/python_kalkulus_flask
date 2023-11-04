@@ -5,26 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fungsi Linear</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- navbar start -->
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="">
-            </div>
-            <div class="option-navbar-section">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/linear">Linear</a></li>
-                    <li><a href="/kuadrat">Kuadrat</a></li>
-                    <li><a href="/kubik">Calculator Graph</a></li>
-                </ul>
-            </div>
+    <header class="header">
+        <nav class="nav container">
+           <div class="nav__data">
+              <a href="#" class="nav__logo">
+               <i class="ri-graduation-cap-fill"></i> Mathexlab
+              </a>
+              
+              <div class="nav__toggle" id="nav-toggle">
+                 <i class="ri-menu-line nav__burger"></i>
+                 <i class="ri-close-line nav__close"></i>
+              </div>
+           </div>
+
+           <!--=============== NAV MENU ===============-->
+           <div class="nav__menu" id="nav-menu">
+              <ul class="nav__list">
+                 <li><a href="/" class="nav__link">Home</a></li>
+
+                 <!-- <li><a href="#" class="nav__link">service</a></li> -->
+
+                 <!--=============== DROPDOWN 1 ===============-->
+                 <li class="dropdown__item">
+                    <div class="nav__link">
+                       <a href="#service" style="color: white;">Service</a> <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </div>
+
+                    <ul class="dropdown__menu">
+                       <li>
+                          <a href="/linear" class="dropdown__link">
+                           <i class="ri-line-chart-fill"></i> linear
+                          </a>                          
+                       </li>
+
+                       <li>
+                          <a href="/kuadrat" class="dropdown__link">
+                           <i class="ri-line-chart-fill"></i> Kuadrat
+                          </a>
+                       </li>
+
+                       <li>
+                          <a href="/kubik" class="dropdown__link">
+                           <i class="ri-line-chart-fill"></i> Kubik
+                          </a>
+                       </li>
+                    </ul>
+                 </li>
+              </ul>
+           </div>
         </nav>
-    </header>
+     </header>
     <!-- navbar end -->
     <h1>Menggambar fungsi linear</h1>
     <form action="/linear" method="POST" id="myForm" class="form-linear">
@@ -57,6 +93,7 @@
     {%endif%}
 
     <script src="../js/script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js')}}"></script>
 </body>
 
 </html>
