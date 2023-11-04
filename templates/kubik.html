@@ -1,63 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fungsi Kuadrat</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-</head>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/navbar.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/kubik.css') }}"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <!-- navbar start -->
     <header class="header">
-        <nav class="nav container">
-           <div class="nav__data">
-              <a href="#" class="nav__logo">
-               <i class="ri-graduation-cap-fill"></i> Mathexlab
-              </a>
-              
-              <div class="nav__toggle" id="nav-toggle">
-                 <i class="ri-menu-line nav__burger"></i>
-                 <i class="ri-close-line nav__close"></i>
+      <nav class="nav container">
+        <div class="nav__data">
+          <a href="#" class="nav__logo">
+            <i class="ri-graduation-cap-fill"></i> Mathexlab
+          </a>
+
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__burger"></i>
+            <i class="ri-close-line nav__close"></i>
+          </div>
+        </div>
+
+        <!--=============== NAV MENU ===============-->
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="/" class="nav__link">Home</a></li>
+
+            <!-- <li><a href="#" class="nav__link">service</a></li> -->
+
+            <!--=============== DROPDOWN 1 ===============-->
+            <li class="dropdown__item">
+              <div class="nav__link">
+                <a href="#service" style="color: white">Service</a>
+                <i class="ri-arrow-down-s-line dropdown__arrow"></i>
               </div>
-           </div>
 
-           <!--=============== NAV MENU ===============-->
-           <div class="nav__menu" id="nav-menu">
-              <ul class="nav__list">
-                 <li><a href="/" class="nav__link">Home</a></li>
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="/linear" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i> linear
+                  </a>
+                </li>
 
-                 <!-- <li><a href="#" class="nav__link">service</a></li> -->
+                <li>
+                  <a href="/kuadrat" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i> Kuadrat
+                  </a>
+                </li>
 
-                 <!--=============== DROPDOWN 1 ===============-->
-                 <li class="dropdown__item">
-                    <div class="nav__link">
-                       <a href="#service" style="color: white;">Service</a> <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                    </div>
+                <li>
+                  <a href="/kubik" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i> Kubik
+                  </a>
+                </li>
 
-                    <ul class="dropdown__menu">
-                       <li>
-                          <a href="/linear" class="dropdown__link">
-                           <i class="ri-line-chart-fill"></i> linear
-                          </a>                          
-                       </li>
-
-                       <li>
-                          <a href="/kuadrat" class="dropdown__link">
-                           <i class="ri-line-chart-fill"></i> Kuadrat
-                          </a>
-                       </li>
-
-                       <li>
-                          <a href="/kubik" class="dropdown__link">
-                           <i class="ri-line-chart-fill"></i> Kubik
-                          </a>
-                       </li>
-
-                       <!--=============== DROPDOWN SUBMENU ===============-->
-                       <!-- <li class="dropdown__subitem">
+                <!--=============== DROPDOWN SUBMENU ===============-->
+                <!-- <li class="dropdown__subitem">
                           <div class="dropdown__link">
                              <i class="ri-bar-chart-line"></i> Reports <i class="ri-add-line dropdown__add"></i>
                           </div>
@@ -82,49 +92,70 @@
                              </li>
                           </ul>
                        </li> -->
-                    </ul>
-                 </li>
               </ul>
-           </div>
-        </nav>
-     </header>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
     <!-- navbar end -->
-    <h1>Menggambar fungsi kubik</h1>
-
-    <form action="/kubik" method="POST" id="myForm">
-        Nilai a <input type="number" name="nilai_a" required>
-        <br>
-        Nilai b <input type="number" name="nilai_b" required>
-        <br>
-        Nilai c <input type="number" name="nilai_c" required>
-        <br>
-        Nilai d <input type="number" name="nilai_d" required>
-        <br>
-        <br>
-        <input type="submit" value="OK">
-        <input type="button" onclick="reset()" value="reset">
-    </form>
+    <div class="title wrap-title">
+      <h1>Menggambar fungsi kubik</h1>
+    </div>
+    <div class="form wrap">
+      <form action="/kubik" method="POST" id="myForm">
+        <div class="input-form">
+          <label for="">Nilai a</label>
+          <input type="number" name="nilai_a" required />
+        </div>
+        <div class="input-form">
+          <label for="">Nilai b</label>
+          <input type="number" name="nilai_b" required />
+        </div>
+        <div class="input-form">
+          <label for="">Nilai c</label>
+          <input type="number" name="nilai_c" required />
+        </div>
+        <div class="input-form">
+          <label for="">Nilai d</label>
+          <input type="number" name="nilai_d" required />
+        </div>
+        <br />
+        <div class="action">
+          <input class="submit" type="submit" value="Ok" />
+          <input class="reset" type="button" onclick="reset()" value="Reset" />
+        </div>
+      </form>
+    </div>
 
     {% if plot_url %}
-    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-        <img style="background-color: tomato; text-align: center;" src={{plot_url}} alt="Chart error">
-        <p>hello</p>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <img
+        class="plot_img"
+        style="background-color: tomato; text-align: center"
+        src="{{plot_url}}"
+        alt="Chart error"
+      />
     </div>
-    {% endif %}
-
-    {%if data%}
-    <table>
-        <th>Titik Potong submu X</th>
-        <th>Titik Potong submu Y</th>
-        <tr>
-            <td>({{data[0]}}, 0), ({{data[1]}}, 0), ({{data[2]}}, 0)</td>
-            <td>( 0, {{data[3]}} )</td>
-        </tr>
+    {% endif %} {%if data%}
+    <table class="table">
+      <th>Titik Potong submu X</th>
+      <th>Titik Potong submu Y</th>
+      <tr>
+        <td>({{data[0]}}, 0), ({{data[1]}}, 0), ({{data[2]}}, 0)</td>
+        <td>( 0, {{data[3]}} )</td>
+      </tr>
     </table>
     {%endif%}
 
     <script src="../js/script.js"></script>
     <script src="{{ url_for('static', filename='js/script.js')}}"></script>
-</body>
-
+  </body>
 </html>
