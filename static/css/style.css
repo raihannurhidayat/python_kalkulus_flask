@@ -8,52 +8,10 @@ html {
     scroll-behavior: smooth;
 }
 
-
-
 a {
     text-decoration: none;
     color: black;
 }
-
-/* navbar style start */
-
-header {
-    background-color: #fff;
-    margin-bottom: 90px;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 18px;
-}
-
-.logo img {
-    width: 240px;
-    height: 49px;
-}
-
-.option-navbar-section ul {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-}
-
-.option-navbar-section ul li {
-    list-style: none;
-}
-
-.option-navbar-section ul li a {
-    font-size: 20px;
-}
-
-.option-navbar-section ul li a:hover {
-    color: #F60;
-    transition: .2s ease-in-out;
-}
-
-/* navbar style end */
 
 /*? hero section style start */
 
@@ -68,7 +26,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* margin-top: 120px; */
+    margin-top: 120px;
 }
 
 .hero-text {

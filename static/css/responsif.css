@@ -3,13 +3,6 @@
         margin-right: 75px;
         margin-left: 75px;
     }
-    .logo img {
-        width: 120px;
-        height: 29px;
-    }
-    .option-navbar-section ul li a {
-        font-size: 16px;
-    }
 
     .hero-text h1 {
         font-size: 40px;
@@ -55,19 +48,6 @@
 }
 
 @media screen and (max-width: 640px) {
-
-    header {
-        margin-bottom: 30px;
-    }
-
-    nav {
-        display: block;
-        text-align: center;
-    }
-    .logo {
-        margin-bottom: 12px;
-    }
-
     .hero-section {
         display: block;
         margin-bottom: 120px;
