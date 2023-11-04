@@ -76,14 +76,16 @@
         width: 100%;
     }
     .hero-text h1 {
-        font-size: 35px;
+        font-size: 50px;
     }
     .hero-img {
         width: 100%;
     }
 
-    .hero-image img{
-        width: 224px;
+    .hero-img img{
+        width: 400px;
+        text-align: center;
+        margin-top: 40px;
     }
     .wrap-service {
         display: block;
