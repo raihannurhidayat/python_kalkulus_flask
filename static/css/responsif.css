@@ -48,6 +48,10 @@
 }
 
 @media screen and (max-width: 640px) {
+    .wrap {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
     .hero-section {
         display: block;
         margin-bottom: 120px;
