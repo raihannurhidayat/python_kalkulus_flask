@@ -1,0 +1,61 @@
+.hero-image {
+    height: 50vh;
+    margin-top: 60px;
+    background: url(https://media.istockphoto.com/id/1183952376/photo/graph-of-parabola.webp?b=1&s=170667a&w=0&k=20&c=yCMQWXmUbdNfG6XCP4aJ-57e9VI5IzMtAh77X53OqMs=  );
+    background-size: cover;
+    background-position: center center;
+  }
+  .wrap {
+    margin-right: 135px;
+    margin-left: 135px;
+  }
+  
+  .rumus1-linear{
+    height: 50px;
+  }
+  
+  .blog-section {
+    background-color: white;
+    margin-bottom: 40px;
+  }
+  
+  .container-blog {
+    margin: 0 75px;
+    padding: 0 0 24px 0;
+  }
+  
+  .container-blog h1 {
+    font-size: 36px;
+  }
+  
+  .container-blog p {
+    font-size: 18px;
+    text-align: justify;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .wrap {
+        margin-right: 75px;
+        margin-left: 75px;
+    }
+  }
+  
+  @media screen and (max-width: 640px) {
+    .tabel-blog {
+      width: 90%;
+    }
+    .wrap {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    .container-blog {
+      margin: 0 8px;
+    }
+    .container-blog h1 {
+      font-size: 30px;
+    }
+    .container-blog p {
+      font-size: 16px;
+      text-align: justify;
+    }
+  }

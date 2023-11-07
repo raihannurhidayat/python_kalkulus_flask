@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mathexlab</title>
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='img/title.png') }}"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/blogkuadrat.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/navbar.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/footer.css') }}"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav container">
+        <div class="nav__data">
+          <a href="#" class="nav__logo">
+            <i class="ri-graduation-cap-fill"></i> Mathexlab
+          </a>
+
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__burger"></i>
+            <i class="ri-close-line nav__close"></i>
+          </div>
+        </div>
+
+        <!--=============== NAV MENU ===============-->
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="/" class="nav__link">Home</a></li>
+            <!--=============== DROPDOWN 1 ===============-->
+
+            <li class="dropdown__item">
+              <div class="nav__link">
+                <a href="#service" style="color: black">Service</a>
+                <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="/linear" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>linear
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/kuadrat" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>Kuadrat
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/kubik" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>Kubik
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="dropdown__item">
+              <div class="nav__link">
+                <a href="#blog" style="color: black">Blog</a>
+                <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="/blog/linear" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>Fungsi linear
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/kuadrat" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>Fungsi Kuadrat
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/kubik" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>Fungsi Kubik
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="hero-image"></div>
+
+    <!-- section blog start -->
+    <section class="wrap blog-section">
+      <div class="container-blog">
+        <br />
+        <h1>Fungsi Kuadrat: Definisi, Rumus, dan Grafik</h1>
+        <br />
+        <p>
+          <b>Pengertian Fungsi Kuadrat</b> <br /><br />Fungsi kuadrat adalah
+          sebuah fungsi polinom yang memiliki peubah/variabel dengan pangkat
+          tertingginya adalah 2 (dua). <br /><br />
+          Secara umum fungsi kuadrat memiliki bentuk umum seperti berikut ini:
+          <br /><br />
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mrow>
+              <mi>f</mi>
+              <mo>(</mo>
+              <mi>x</mi>
+              <mo>)</mo>
+              <mo>=</mo>
+              <msup>
+                <mi>ax</mi>
+                <mn>2</mn>
+              </msup>
+              <mo>+</mo>
+              <mi>bx</mi>
+              <mo>+</mo>
+              <mn>c</mn>
+            </mrow> </math
+          >, a ≠ 0 <br /><br />
+          dengan f(x) = y yang merupakan variabel terikat, x adalah variabel
+          bebas, sedangkan a, dan b merupakan koefisien dan c adalah suatu
+          konstanta. <br /><br />
+        </p>
+        <p>
+          Berikut beberapa sifat-sifat grafik fungsi kuadrat berdasarkan bentuk
+          umumnya. <br /><br /><b>Nilai a: Bentuk Parabola Fungsi Kuadrat</b
+          ><br />
+          Bentuk parabola fungsi kuadrat ditentukan nilai koefisien a dalam
+          bentuk umum f(x) = ax² + bx + c, yaitu: <br /><br />
+          a > 0 kurva parabola membuka ke atas (a positif) <br />
+          a < 0 kurva parabola membuka ke bawah (a negatif) <br /><br />
+          Berikut ilustrasinya, <br />
+        </p>
+        <img
+          src="{{ url_for('static', filename='img/bloggrafik1kuadrat.png') }}"
+          style="width: 60%"
+          alt=""
+        /><br />
+        <p>
+          Contoh <br />
+          a > 0:
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mrow>
+              <mi>f</mi>
+              <mo>(</mo>
+              <mi>x</mi>
+              <mo>)</mo>
+              <mo>=</mo>
+              <msup>
+                <mi>3x</mi>
+                <mn>2</mn>
+              </msup>
+              <mo>+</mo>
+              <mi>x</mi>
+              <mo>+</mo>
+              <mn>1</mn>
+            </mrow> </math
+          >, maka kurva membuka ke atas <br />
+          Contoh <br />
+          a < 0:
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mrow>
+              <mi>f</mi>
+              <mo>(</mo>
+              <mi>x</mi>
+              <mo>)</mo>
+              <mo>=</mo>
+              <msup>
+                <mi>-3x</mi>
+                <mn>2</mn>
+              </msup>
+              <mo>+</mo>
+              <mi>x</mi>
+              <mo>+</mo>
+              <mn>1</mn>
+            </mrow> </math
+          >, maka kurva membuka ke bawah
+        </p>
+        <br />
+        <p>
+          <b>Nilai c: Titik Potong Sumbu y</b><br /><br />
+          Grafik Fungsi Kuadrat Titik potong grafik fungsi kuadrat ditentukan
+          oleh nilai konstanta c, pada bentuk umum fungsi kuadrat ax² + bx + c.
+          Nilai konstanta c merupakan titik potong sumbu y dari kurva yang
+          dibentuk fungsi kuadrat, yaitu titik (0, c)
+        </p>
+        <br />
+        <img
+          src="{{ url_for('static', filename='img/bloggrafik2kuadrat.png') }}"
+          alt=""
+        />
+        <br />
+        <br />
+        <p>
+          <b>Titik Ekstrim: Titik Puncak Grafik Fungsi Kuadrat</b><br /><br />
+          Titik puncak grafik parabola dari fungsi kuadrat dapat dihitung dari
+          bentuk umumnya ax² + bx + c. Titik puncak kurva parabola juga disebut
+          titik ekstrim. <br /><br />
+          Berikut rumus untuk mencari titik puncak grafik fungsi kuadrat, yaitu
+          hitung titik ekstrim di sumbu x, lalu hitung nilai fungsinya untuk
+          mendapat titik ekstrim sumbu y.
+        </p>
+        <img
+          src="{{ url_for('static', filename='img/rumuskuadrat1.png') }}"
+          alt=""
+        />
+        <p>
+          <b>Contoh:</b><br /><br />
+          Diketahui sebuah fungsi kuadrat f(x) = 3x² + 6x + 2, tentukan titip
+          puncak dari grafiknya!
+        </p>
+        <img
+          src="{{ url_for('static', filename='img/rumuskuadrat2.png') }}"
+          style="width: 300px"
+          alt=""
+        />
+        <br />
+        <p>
+          Sehingga titik puncak grafik tersebut berada pada titik (-1, -1),
+          berikut ilustrasinya.
+        </p>
+        <br />
+        <img
+          src="{{ url_for('static', filename='img/img3.png') }}"
+          style="width: 350px"
+          alt=""
+        />
+        <br />
+        <br />
+        <p>
+          <b>Nilai Determinan: Karakteristik Grafik Fungsi Kuadrat</b
+          ><br /><br />
+          Nilai determinan fungsi kuadrat ax² + bx + c adalah D = b² - 4ac.
+          Nilai determinan suatu fungsi kuadrat dapat digunakan sebagai
+          parameter karakteristik grafik berdasarkan titik potongnya di sumbu x.
+        </p>
+        <img
+          src="{{ url_for('static', filename='img/rumuskuadrat3.png') }}"
+          style="width: 200px"
+          alt=""
+        />
+        <br />
+        <p>
+          Dengan karakteristik grafik fungsi kuadrat berdasarkan nilai
+          determinannya (D) sebagai berikut :
+        </p>
+        <p>
+          a. D > 0; berarti grafik fungsi kuadrat mempunyai dua akar real
+          berbeda (grafik memotong sumbu x di dua titik yang berbeda).
+        </p>
+        <p>
+          b. D = 0; berarti grafik fungsi kuadrat mempunyai dua akar real kembar
+          (grafik memotong sumbu x pada satu titik dan merupakan sebuah titik
+          puncak).
+        </p>
+        <p>
+          c. D < 0; berarti grafik fungsi kuadrat mempunyai akar imaginer
+          (grafik tidak memotong sumbu x).Terdapat 2 jenis karakteristik grafik
+          kuadrat saat nilai D < 0, yaitu:
+        </p>
+        <p>
+          1. Definit positif saat a > 0 dan D < 0 adalah karakteristik grafik
+          kuadrat saat posisinya berada di atas sumbu x.
+        </p>
+        <p>
+          2. Definit negatif saat a < 0 dan D < 0 adalah sebutan karakteristik
+          grafik kuadrat saat posisinya berada di bawah sumbu x.
+        </p>
+        <br />
+        <p>
+          Berikut ilustrasi grafik fungsi kuadrat berdasarkan nilai
+          determinannya.
+        </p>
+        <br />
+        <img
+          src="{{ url_for('static', filename='img/bloggrafik3kuadrat.png') }}"
+          alt=""
+          style="width: 350px"
+        />
+        <br />
+        <p>
+          <b>Contoh Soal</b><br />
+          <br />
+          Carilah titik potong dari fungsi kuadrat f(x) = x² + 6x + 8
+          <br /><br />
+          <b>Penyelesaian</b>: <br /><br />
+          Fungsi f(x) = x² + 6x + 8, berdasarkan bentuk umum diperoleh a = 1; b
+          = 6; dan c = 8 <br /><br />
+          #Menentukan karakteristik grafik kuadrat dengan nilai determinan
+        </p>
+        <br />
+        <p>
+          D = b² - 4ac = (6)² - 4(1)(8) = 36 - 32 = 4 <br /><br />
+          Diperoleh D = 4 memenuhi D > 0 <br />
+          Sehingga fungsi kuadrat mempunyai 2 akar real yang berbeda, dalam
+          bentuk grafik akan memotong sumbu x di 2 titik yang berbeda.
+        </p>
+        <br />
+        <p>
+          # Menghitung titik potong terhadap sumbu x <br /><br />
+          Karena <b>D > 0</b>, maka dilanjutkan dengan menghitung akar-akar
+          persamaan kuadrat Berikut dihitung akar-akar persamaan kuadrat dengan
+          menggunakan metode faktorisasi
+        </p>
+        <br />
+        <img
+          src="{{ url_for('static', filename='img/rumuskuadrat4.png') }}"
+          alt=""
+          style="width: 350px"
+        />
+        <br />
+        <p>Sehingga dapat dihitung akar-akar persamaan kuadratnya</p>
+        <img
+          src="{{ url_for('static', filename='img/rumuskuadrat5.png') }}"
+          alt=""
+          style="width: 100px"
+        />
+        <br>
+        <br>
+        <p>
+          <b>Diperoleh</b>, akar-akar persamaan kuadrat dari <b>x² + 6x + 8 = 0</b> adalah <b>x1
+          = -2</b> dan <b>x2 = -4</b>. <br><br> Sehingga titik potong sumbu x dari grafik fungsi
+        <b>f(x) = x² + 6x + 8</b> adalah <b>x1 = -2</b> dan <b>x2 = -4</b>.
+        </p>
+      </div>
+    </section>
+    <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+  </body>
+</html>
