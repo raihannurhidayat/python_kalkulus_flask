@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Kalkulus</title>
+    <title>Mathexlab</title>
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='img/title.png') }}"
+      type="image/x-icon"
+    />
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/style.css') }}"
@@ -21,8 +26,16 @@
       href="{{ url_for('static', filename='css/blog.css') }}"
     />
     <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/footer.css') }}"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
@@ -84,7 +97,7 @@
 
               <ul class="dropdown__menu">
                 <li>
-                  <a href="/linear" class="dropdown__link">
+                  <a href="/blog/linear" class="dropdown__link">
                     <i class="ri-line-chart-fill"></i>Fungsi linear
                   </a>
                 </li>
@@ -232,6 +245,7 @@
     </section>
     <!-- service section end -->
 
+    <!-- blog section start -->
     <section id="blog" class="blog-section">
       <h1 class="text-blog">Blog</h1>
       <div class="card-blog wrap">
@@ -243,22 +257,23 @@
           data-aos-delay="50"
         >
           <a
-            href="https://design.tutsplus.com/articles/envato-tuts-community-challenge-created-by-you-july-edition--cms-26724"
+            href="/blog/linear"
             class="card"
           >
             <div
               class="thumb"
               style="
-                background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-5.jpg);
+                background-image: url(https://media.istockphoto.com/id/1183952376/photo/graph-of-parabola.webp?b=1&s=170667a&w=0&k=20&c=yCMQWXmUbdNfG6XCP4aJ-57e9VI5IzMtAh77X53OqMs=);
               "
             ></div>
             <article>
-              <h1>Created by You, July Edition</h1>
+              <h1>Fungsi Linear</h1>
               <p>
-                Welcome to our monthly feature of fantastic tutorial results
-                created by you, the Envato Tuts+ community!
+                Fungsi linear adalah fungsi polinomial derajat satu. Persamaan
+                umumnya:f(x)=ax+b, dengan a sebagai koefisien kemiringan dan b
+                sebagai intercept....
               </p>
-              <span>Melody Nieves</span>
+              <span>Click to read more</span>
             </article>
           </a>
         </div>
@@ -276,16 +291,33 @@
             <div
               class="thumb"
               style="
-                background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-5.jpg);
+                background-image: url(https://media.istockphoto.com/id/859591094/id/foto/fungsi-matematika-dan-pensil.jpg?s=612x612&w=0&k=20&c=lGGJtol1JRO2E8dXpl8lgud2DGpJqDAzTzrN7cYKdu8=);
               "
             ></div>
             <article>
-              <h1>Created by You, July Edition</h1>
+              <h1>Fungsi Kuadrat</h1>
               <p>
-                Welcome to our monthly feature of fantastic tutorial results
-                created by you, the Envato Tuts+ community!
+                Fungsi kuadrat adalah fungsi polinomial derajat dua, ditulis
+                sebagai
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <mrow>
+                    <mi>f</mi>
+                    <mo>(</mo>
+                    <mi>x</mi>
+                    <mo>)</mo>
+                    <mo>=</mo>
+                    <msup>
+                      <mi>ax</mi>
+                      <mn>2</mn>
+                    </msup>
+                    <mo>+</mo>
+                    <mi>bx</mi>
+                    <mo>+</mo>
+                    <mn>c</mn>
+                  </mrow> </math
+                >, dengan a, b, dan c sebagai konstanta....
               </p>
-              <span>Melody Nieves</span>
+              <span>Click to read more</span>
             </article>
           </a>
         </div>
@@ -303,21 +335,44 @@
             <div
               class="thumb"
               style="
-                background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-5.jpg);
+                background-image: url(https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWF0aGVtYXRpY3MlMjBjdWJpa3xlbnwwfHwwfHx8MA%3D%3D);
               "
             ></div>
             <article>
-              <h1>Created by You, July Edition</h1>
+              <h1>Fungsi Kubik</h1>
               <p>
-                Welcome to our monthly feature of fantastic tutorial results
-                created by you, the Envato Tuts+ community!
+                Fungsi kubik adalah jenis fungsi polinomial dengan derajat tiga,
+                ditulis sebagai
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <mrow>
+                    <mi>f</mi>
+                    <mo>(</mo>
+                    <mi>x</mi>
+                    <mo>)</mo>
+                    <mo>=</mo>
+                    <msup>
+                      <mi>ax</mi>
+                      <mn>3</mn>
+                    </msup>
+                    <mo>+</mo>
+                    <msup>
+                      <mi>bx</mi>
+                      <mn>2</mn>
+                    </msup>
+                    <mo>+</mo>
+                    <mi>cx</mi>
+                    <mo>+</mo>
+                    <mn>d</mn>
+                  </mrow> </math
+                >, di mana a, b, c, dan d adalah konstanta....
               </p>
-              <span>Melody Nieves</span>
+              <span>Click to read more</span>
             </article>
           </a>
         </div>
       </div>
     </section>
+    <!-- blog section end -->
 
     <!-- our team start -->
     <section class="team-section wrap" id="team">
@@ -354,6 +409,33 @@
       </div>
     </section>
     <!-- our team end -->
+
+    <!-- footer start -->
+    <footer>
+      <div class="footer">
+        <!-- <div class="row">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+        </div> -->
+
+        <div class="row">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#service">Our Services</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#team">Our Team</a></li>
+          </ul>
+        </div>
+
+        <div class="row">
+          Mathexlab Copyright © 2023 Mathexlab - All rights
+          reserved || Designed By: Kelompok 8
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
 
     <script src="{{ url_for('static', filename='js/script.js')}}"></script>
     <script src="../js/script.js"></script>
