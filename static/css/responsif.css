@@ -63,11 +63,11 @@
         font-size: 50px;
     }
     .hero-img {
-        width: 100%;
+        width: 350px;
     }
 
     .hero-img img{
-        width: 400px;
+        width: 350px;
         text-align: center;
         margin-top: 40px;
     }

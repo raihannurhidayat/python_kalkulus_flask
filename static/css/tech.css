@@ -1,7 +1,8 @@
 .tech-section {
   margin-top: 120px;
   background-color: rgb(48, 48, 48);
-  height: 50vh;
+  height: auto;
+  padding-bottom: 40px;
 }
 
 .tech-wrap h1 {
@@ -14,7 +15,7 @@
 
 .tech-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     margin-top: 50px;
 }

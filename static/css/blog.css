@@ -80,15 +80,25 @@ span {
     background-position: center center;
 }
 
+@media screen and (max-width: 1000px) {
+    .blog-section{
+        height: auto;
+        padding-bottom: 40px;
+    }
+}
 @media screen and (max-width: 640px) {
     .card-blog {
         display: block;
     }
 
     .blog-section {
-        height: 1500px;
+        height: auto;
+        padding-bottom: 40px;
     }
     .item {
+        width: auto;
         margin-top: 24px;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
