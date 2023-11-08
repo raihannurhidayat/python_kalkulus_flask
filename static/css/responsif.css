@@ -64,6 +64,7 @@
     }
     .hero-img {
         width: 350px;
+        margin: 0 auto;
     }
 
     .hero-img img{
