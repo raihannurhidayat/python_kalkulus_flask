@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fungsi Kuadrat</title>
     <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='img/title.png') }}"
+      type="image/x-icon"
+    />
+    <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/navbar.css') }}"
     />
@@ -30,32 +35,57 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li><a href="/" class="nav__link">Home</a></li>
-
-            <!-- <li><a href="#" class="nav__link">service</a></li> -->
-
             <!--=============== DROPDOWN 1 ===============-->
+
             <li class="dropdown__item">
               <div class="nav__link">
-                <a href="#service" style="color: white">Service</a>
+                <a href="#service" style="color: black">Service</a>
                 <i class="ri-arrow-down-s-line dropdown__arrow"></i>
               </div>
 
               <ul class="dropdown__menu">
                 <li>
                   <a href="/linear" class="dropdown__link">
-                    <i class="ri-line-chart-fill"></i> linear
+                    <i class="ri-line-chart-fill"></i>linear
                   </a>
                 </li>
 
                 <li>
                   <a href="/kuadrat" class="dropdown__link">
-                    <i class="ri-line-chart-fill"></i> Kuadrat
+                    <i class="ri-line-chart-fill"></i>Kuadrat
                   </a>
                 </li>
 
                 <li>
                   <a href="/kubik" class="dropdown__link">
-                    <i class="ri-line-chart-fill"></i> Kubik
+                    <i class="ri-line-chart-fill"></i>Kubik
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="dropdown__item">
+              <div class="nav__link">
+                <a href="#blog" style="color: black">Blog</a>
+                <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="/blog/linear" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>Fungsi linear
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/blog/kuadrat" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>Fungsi Kuadrat
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/kubik" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>Fungsi Kubik
                   </a>
                 </li>
               </ul>

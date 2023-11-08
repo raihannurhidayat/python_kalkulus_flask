@@ -1,0 +1,52 @@
+.tech-section {
+  margin-top: 120px;
+  background-color: rgb(48, 48, 48);
+  height: 50vh;
+}
+
+.tech-wrap h1 {
+  color: white;
+  text-align: center;
+  font-size: 36px;
+  letter-spacing: 4px;
+  padding-top: 12px;
+}
+
+.tech-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.tech {
+    width: 150px;
+}
+
+.tech img{
+    background-color: white;
+    padding: 24px;
+    border-radius: 50%;
+    width: 150px;
+}
+
+.tech h4 {
+    color: white;
+    text-align: center;
+    margin-top: 8px;
+}
+
+@media screen and (max-width:640px) {
+    .tech-section{
+        height: auto;
+        margin-bottom: 32px;
+        padding-bottom: 40px;
+    }
+    .tech-container{
+        display: block;
+    }
+    .tech {
+        margin: 0 auto;
+        margin-top: 24px;
+    }
+}

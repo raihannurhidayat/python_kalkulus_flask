@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mathexlab</title>
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='img/title.png') }}"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/bloglinear.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/navbar.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/footer.css') }}"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav container">
+        <div class="nav__data">
+          <a href="#" class="nav__logo">
+            <i class="ri-graduation-cap-fill"></i> Mathexlab
+          </a>
+
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__burger"></i>
+            <i class="ri-close-line nav__close"></i>
+          </div>
+        </div>
+
+        <!--=============== NAV MENU ===============-->
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="/" class="nav__link">Home</a></li>
+            <!--=============== DROPDOWN 1 ===============-->
+
+            <li class="dropdown__item">
+              <div class="nav__link">
+                <a href="#service" style="color: black">Service</a>
+                <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="/linear" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>linear
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/kuadrat" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>Kuadrat
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/kubik" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>Kubik
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="dropdown__item">
+              <div class="nav__link">
+                <a href="#blog" style="color: black">Blog</a>
+                <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="/blog/linear" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>Fungsi linear
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/blog/kuadrat" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>Fungsi Kuadrat
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/kubik" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>Fungsi Kubik
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- image start -->
+    <div class="hero-image"></div>
+    <!-- image end -->
+
+    <!-- blog section start -->
+    <section class="wrap blog-section">
+      <div class="container-blog">
+        <br />
+        <h1>Fungsi Linear: Pengertian, Contoh Soal dan Pembahasan</h1>
+        <br />
+        <p>
+          Fungsi adalah suatu bentuk matematis yang menyatakan hubungan
+          ketergantungan antara satu variabel dengan variabel lainnya.
+          Unsur-unsur pembentuk fungsi adalah variabel, koefisien, dan
+          konstanta.
+        </p>
+        <br />
+        <p>
+          Variabel adalah unsur yang sifatnya berubah-ubah dari satu keadaan ke
+          keadaan lainnya. Variabel dapat dibedakan menjadi variabel bebas dan
+          variabel terikat. Variabel bebas adalah variabel yang menjelaskan
+          variabel lainnya. Adapun Variabel terikat adalah variabel yang
+          diterangkan oleh variabel bebas. Koefisien adalah bilangan atau angka
+          yang diletakkan tepat di depan suatu variabel, terkait dengan variabel
+          yang bersangkutan. Konstanta sifatnya tetap dan tidak terkait dengan
+          suatu variabel apapun.
+        </p>
+        <br />
+        <p>
+          Contoh: y = 10x + 6 <br />
+          Keterangan: <br />
+          x = Variabel bebas adalah variabel yang nilainya tidak tergantung pada
+          variabel lain y = Variabel terikat adalah variabel yang nilainya
+          tergantung pada variabel lain 10 = adalah koefisien variabel x 6 =
+          adalah konstanta
+        </p>
+        <br />
+        <p>
+          Contoh: y = x + 1 <br />
+          Keterangan: <br />
+          x = Variabel bebas adalah variabel yang nilainya tidak tergantung pada
+          variabel lain y = Variabel terikat adalah variabel yang nilainya
+          tergantung pada variabel lain 1 = adalah koefisien variabel x 1 =
+          adalah konstanta
+        </p>
+        <br />
+        <p>
+          <b>Pengertian Fungsi Linear</b> <br />
+          Fungsi linear adalah suatu fungsi polinom yang variabelnya berpangkat
+          satu atau suatu fungsi yang grafiknya merupakan garis lurus.Oleh
+          karena itu fungsi linier sering disebut dengan persamaan garis
+          lurus.<br /><b>Bentuk umum fungsi linear</b> adalah sebagai
+          berikut:<br />
+          f : x → mx + c atau<br />
+          f(x) = mx + c atau<br />
+          y = mx + c<br />
+          dimana,<br />
+          m adalah gradien / kemiringan / kecondongan dan c adalah konstanta<br />
+          Contoh :<br />
+          y = 5 + 7x<br />
+          y = 2x+5 <br />
+          y = -3x+2
+        </p>
+        <br />
+        <p>
+          <b>Membuat Kurva Fungsi Linear</b> <br />
+          Adapun cara membuat kurva linear diantaranya:<br />
+          a. <b>Dengan cara sederhana</b> yaitu dengan menggunakan tabel x dan y,
+          dimana kita tentukan dulu nilai x sebagai variabel bebas, maka dengan
+          memasukkan beberapa nilai x kita akan memperoleh nilai y. <br />
+          <br />
+          Contoh : y = 6 + 2x <br />
+          Berikut ini adalah tabel yang diperoleh dari fungsi di atas
+        </p>
+        <br />
+        <img
+          src="{{ url_for('static', filename='img/blogtabellinear.png') }}"
+          alt=""
+          class="tabel-blog"
+        />
+        <p>
+          Setelah dibuat tabelnya, selanjutnya titik-titik tersebut dihubungkan
+          agar menghasilkan garis pada suatu kurva seperti berikut ini
+        </p>
+        <br />
+        <img
+          src="{{ url_for('static', filename='img/bloggrafik1linear.png') }}"
+          alt=""
+        />
+        <br />
+        <p>
+          b. <b>Dengan cara matematis</b> yaitu dengan mencari titik potong
+          untuk sumbu x dan juga sumbu y. <br />
+          <br />
+          Langkah-langkah membuat grafik fungsi linier dengan cara matematis:
+          <br />
+          1. Tentukan titik potong dengan sumbu x, y = 0 diperoleh koordinat
+          A[x, 0] <br />
+          2. Tentukan titik potong dengan sumbu y, x = 0 diperoleh koordinat
+          B[0, y] <br />
+          3. Hubungkan dua titik A dan B sehingga terbentuk garis lurus. <br />
+          4. Apabila b bernilai positif, maka fungsi linear akan dilukis garis
+          dari arah kiri bawah ke kanan atas. <br />
+          5. Apabila b bernilai negatif, maka fungsi linear akan dilukis garis
+          dari arah kiri atas ke kanan bawah.<br />
+          6. Apabila b bernilai 0, maka fungsi linear akan dilukis garis yang
+          sejajar dengan sumbu datar X.<br />
+          <br />
+          Contoh: Misalkan diketahui y = 6 - 2x. Maka grafik fungsi dapat
+          digambarkan menggunakan ciri-ciri penting, yaitu: <br />
+          1. Titik potong fungsi dengan sumbu y, x = 0, maka y = 6. Jadi
+          titiknya adalah A(0,6) <br />
+          2. Titik potong fungsi dengan sumbu x, y = 0, maka x = 3. Jadi
+          titiknya adalah B(3,0) Dengan menggunakan kedua ciri ini maka kita
+          dapat menggambar grafik fungsi y = 6 + 2x seperti terlihat pada gambar
+          berikut:
+        </p>
+        <br />
+        <img
+          src="{{ url_for('static', filename='img/bloggrafik2linear.png') }}"
+          alt=""
+        />
+        <br />
+        <p>
+          <b>Gradien dan Persamaan Garis Lurus</b><br />
+          Gradien adalah koefisien yang menentukan arah garis fungsi linier,
+          biasanya koefisien ini melekat pada variabel x. <br />
+          Jika gambar kurva bergerak dari kiri atas ke kanan bawah maka nilai
+          gradiennya negatif dan juga sebaliknya. <br />
+          Contoh: <br />
+          y = -x + 3 <br />
+          Jika x = 0 → y = 3, koordinat [0,3]<br />
+          Jika y = 0 → x = 3, koordinat [3,0] <br />
+        </p>
+        <br />
+        <p>
+          *Catatan: <br />
+          a. Garis lurus yang melalui titik A[x1, y1] dan B[x2, y2] memiliki
+          gradien m. Diperoleh nilai m-nya dari rumus berikut:
+        </p>
+        <br />
+        <img
+          src="{{ url_for('static', filename='img/rumuslinear1.png') }}"
+          alt=""
+          class="rumus1-linear"
+        />
+        <p>
+          b. Persamaan garis lurus yang bergradien m dan melalui titik A[x1,
+          y1], fungsinya adalah:
+        </p>
+        <img
+          src="{{ url_for('static', filename='img/rumuslinear2.png') }}"
+          alt=""
+        />
+        <p>Ada beberapa hal yang harus diperhatikan, yakni:</p>
+        <br />
+        <p>
+          1. a > 0; garis dari persamaan linear akan bergerak dari arah kiri
+          bawah ke kanan atas.<br />2. a < 0; garis dari persamaan linear akan
+          bergerak dari arah kiri atas ke kanan bawah. <br />3. a = 0; garis
+          dari persamaan linear akan bergerak dari besarnya konstanta b sehingga
+          sejajar dengan sumbu x ke arah kiri maupun kanan. <br />4. b > 0;
+          grafik persamaan linear akan memotong sumbu y yang memiliki nilai
+          positif. <br />5. b < 0; grafik persamaan linear akan memotong sumbu y
+          yang memiliki nilai negatif. <br />6. b = 0; grafik tersebut tidak
+          memiliki titik potong dengan sumbu y, sehingga grafik tersebut akan
+          bergerak dari titik pangkal atau titik 0.
+        </p>
+        <br />
+        <p>
+          <b>Hubungan Antar Garis Lurus</b> <br /><br />
+          Pada fungsi linear yang “mengharuskan” adanya garis lurus antar kedua
+          himpunan, maka memiliki hubungan-hubungan sebagai berikut:
+          <br /><br /><b>1.Dua Garis Saling Berimpit</b><br /><br />
+          Dua garis lurus akan saling berimpit satu sama lain, apabila terdapat
+          persamaan garis satu yang mana merupakan persamaan garis lainnya.
+          <br /><br /><b>2.Dua Garis Saling Sejajar</b><br /><br />
+          Dua garis lurus akan sejajar satu sama lain, jika kemiringan garis
+          (gradien) kedua garis tersebut memiliki nilai yang sama besar.<br /><br /><b
+            >3.Dua Garis Saling Berpotongan</b
+          ><br /><br />
+          Dua garis akan saling berpotongan satu sama lain, jika kemiringan
+          kedua garis tersebut berbeda atau tidak memiliki nilai yang sama
+          besar.<br /><br /><b>4.Dua Garis Saling Berpotongan Tegak Lurus</b
+          ><br /><br />
+          Dua garis akan saling berpotongan tegak lurus satu sama lain, jika
+          kemiringan kedua garis tersebut saling berkebalikan dengan tanda yang
+          berlawanan.
+        </p>
+      </div>
+    </section>
+    <!-- blog section end -->
+
+    <!-- footer start -->
+    <footer>
+      <div class="footer">
+        <div class="row">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#service">Our Services</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#team">Our Team</a></li>
+          </ul>
+        </div>
+
+        <div class="row">
+          Mathexlab Copyright © 2023 Mathexlab - All rights reserved || Designed
+          By: Kelompok 8
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+  </body>
+</html>

@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Kalkulus</title>
+    <title>Mathexlab</title>
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='img/title.png') }}"
+      type="image/x-icon"
+    />
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/style.css') }}"
@@ -17,8 +22,24 @@
       href="{{ url_for('static', filename='css/navbar.css') }}"
     />
     <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/blog.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/footer.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/tech.css') }}"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
@@ -43,13 +64,11 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li><a href="#home" class="nav__link">Home</a></li>
-
-            <!-- <li><a href="#" class="nav__link">service</a></li> -->
-
             <!--=============== DROPDOWN 1 ===============-->
+
             <li class="dropdown__item">
               <div class="nav__link">
-                <a href="#service" style="color: white">Service</a>
+                <a href="#service" style="color: black">Service</a>
                 <i class="ri-arrow-down-s-line dropdown__arrow"></i>
               </div>
 
@@ -71,64 +90,37 @@
                     <i class="ri-line-chart-fill"></i>Kubik
                   </a>
                 </li>
+              </ul>
+            </li>
 
-                <!--=============== DROPDOWN SUBMENU ===============-->
-                <!-- <li class="dropdown__subitem">
-                          <div class="dropdown__link">
-                             <i class="ri-bar-chart-line"></i> Reports <i class="ri-add-line dropdown__add"></i>
-                          </div>
+            <li class="dropdown__item">
+              <div class="nav__link">
+                <a href="#blog" style="color: black">Blog</a>
+                <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
 
-                          <ul class="dropdown__submenu">
-                             <li>
-                                <a href="#" class="dropdown__sublink">
-                                   <i class="ri-file-list-line"></i> Documents
-                                </a>
-                             </li>
-     
-                             <li>
-                                <a href="#" class="dropdown__sublink">
-                                   <i class="ri-cash-line"></i> Payments
-                                </a>
-                             </li>
-     
-                             <li>
-                                <a href="#" class="dropdown__sublink">
-                                   <i class="ri-refund-2-line"></i> Refunds
-                                </a>
-                             </li>
-                          </ul>
-                       </li> -->
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="/blog/linear" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>Fungsi linear
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/blog/linear" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>Fungsi Kuadrat
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/kubik" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>Fungsi Kubik
+                  </a>
+                </li>
               </ul>
             </li>
 
             <li><a href="#team" class="nav__link">Our Team</a></li>
-
-            <!--=============== DROPDOWN 2 ===============-->
-            <!-- <li class="dropdown__item">
-                    <div class="nav__link">
-                       Users <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                    </div>
-
-                    <ul class="dropdown__menu">
-                       <li>
-                          <a href="#" class="dropdown__link">
-                             <i class="ri-user-line"></i> Profiles
-                          </a>                          
-                       </li>
-
-                       <li>
-                          <a href="#" class="dropdown__link">
-                             <i class="ri-lock-line"></i> Accounts
-                          </a>
-                       </li>
-
-                       <li>
-                          <a href="#" class="dropdown__link">
-                             <i class="ri-message-3-line"></i> Messages
-                          </a>
-                       </li>
-                    </ul>
-                 </li> -->
 
             <li><a href="#" class="nav__link">Contact</a></li>
           </ul>
@@ -141,24 +133,72 @@
     <!-- hero section start -->
     <section class="hero-section wrap" id="home">
       <div class="hero-text">
-        <h1 data-aos="fade-right" data-aos-duration="1500">Solved your Problem Math in Graph</h1>
-        <p class="desc">
-          
-        </p>
-        <a class="button-text" data-aos="fade-up" data-aos-delay="500" data-aos-offset="50">Get Started</a>
+        <h1 data-aos="fade-right" data-aos-duration="1500">
+          Solved your Problem Math in Graph
+        </h1>
+        <p class="desc"></p>
+        <a
+          class="button-text"
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-offset="50"
+          href="#service"
+          >Get Started</a
+        >
       </div>
       <div class="hero-img">
-        <img data-aos="fade-left" data-aos-duration="1500" src="{{ url_for('static', filename='img/hero2.png') }}" alt="" />
+        <img
+          data-aos="fade-left"
+          data-aos-duration="1500"
+          src="{{ url_for('static', filename='img/hero2.png') }}"
+          alt=""
+        />
       </div>
     </section>
     <!-- hero section end -->
+
+    <!-- tech section start -->
+    <section class="tech-section" id="tech">
+      <div class="tech-wrap wrap">
+        <h1>Tech Stack</h1>
+        <div class="tech-container">
+          <div class="tech" data-aos="flip-left" data-aos-duration="1000">
+            <img src="{{ url_for('static', filename='img/htmldark.png') }}" alt="">
+            <h4>HTML</h4>
+          </div>
+          <div class="tech" data-aos="flip-left" data-aos-duration="1000">
+            <img src="{{ url_for('static', filename='img/cssdark.png') }}" alt="">
+            <h4>CSS</h4>
+          </div>
+          <div class="tech" data-aos="flip-left" data-aos-duration="1000">
+            <img src="{{ url_for('static', filename='img/jsdark.png') }}" alt="">
+            <h4>Javascript</h4>
+          </div>
+          <div class="tech" data-aos="flip-left" data-aos-duration="1000">
+            <img src="{{ url_for('static', filename='img/flask.png') }}" alt="">
+            <h4>Flask</h4>
+          </div>
+          <div class="tech" data-aos="flip-left" data-aos-duration="1000">
+            <img src="{{ url_for('static', filename='img/pythondark.png') }}" alt="">
+            <h4>Python</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- tech section end -->
 
     <!-- service section start -->
     <section class="service-section wrap" id="service">
       <p>Service</p>
       <h1>Solve Your Problem Graph Math Now !</h1>
-      <div class="wrap-service" >
-        <div class="service-option" data-aos="fade-up" data-aos-offset="250" data-aos-duration="1000" data-aos-delay="50">
+      <div class="wrap-service">
+        <div
+          class="service-option"
+          data-aos="fade-up"
+          data-aos-offset="250"
+          data-aos-duration="1000"
+          data-aos-delay="50"
+        >
           <svg
             class="svg-style"
             xmlns="http://www.w3.org/2000/svg"
@@ -180,7 +220,13 @@
           </h5>
           <a href="/linear" class="button-service">Get Started</a>
         </div>
-        <div class="service-option" data-aos="fade-up" data-aos-offset="250" data-aos-duration="1500" data-aos-delay="200">
+        <div
+          class="service-option"
+          data-aos="fade-up"
+          data-aos-offset="250"
+          data-aos-duration="1500"
+          data-aos-delay="200"
+        >
           <svg
             class="svg-style"
             xmlns="http://www.w3.org/2000/svg"
@@ -202,7 +248,13 @@
           </h5>
           <a href="/kuadrat" class="button-service">Get Started</a>
         </div>
-        <div class="service-option" data-aos-offset="250" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="350">
+        <div
+          class="service-option"
+          data-aos-offset="250"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+          data-aos-delay="350"
+        >
           <svg
             class="svg-style"
             xmlns="http://www.w3.org/2000/svg"
@@ -228,6 +280,135 @@
     </section>
     <!-- service section end -->
 
+    <!-- blog section start -->
+    <section id="blog" class="blog-section">
+      <h1 class="text-blog">Blog</h1>
+      <div class="card-blog wrap">
+        <div
+          class="item"
+          data-aos="fade-up"
+          data-aos-offset="250"
+          data-aos-duration="1000"
+          data-aos-delay="50"
+        >
+          <a
+            href="/blog/linear"
+            class="card"
+          >
+            <div
+              class="thumb"
+              style="
+                background-image: url(https://media.istockphoto.com/id/859591094/id/foto/fungsi-matematika-dan-pensil.jpg?s=612x612&w=0&k=20&c=lGGJtol1JRO2E8dXpl8lgud2DGpJqDAzTzrN7cYKdu8=);
+              "
+            ></div>
+            <article>
+              <h1>Fungsi Linear</h1>
+              <p>
+                Fungsi linear adalah fungsi polinomial derajat satu. Persamaan
+                umumnya:f(x)=ax+b, dengan a sebagai koefisien kemiringan dan b
+                sebagai intercept....
+              </p>
+              <span>Click to read more</span>
+            </article>
+          </a>
+        </div>
+        <div
+          class="item"
+          data-aos="fade-up"
+          data-aos-offset="250"
+          data-aos-duration="1000"
+          data-aos-delay="50"
+        >
+          <a
+            href="/blog/kuadrat"
+            class="card"
+          >
+            <div
+              class="thumb"
+              style="
+                background-image: url(https://media.istockphoto.com/id/1183952376/photo/graph-of-parabola.webp?b=1&s=170667a&w=0&k=20&c=yCMQWXmUbdNfG6XCP4aJ-57e9VI5IzMtAh77X53OqMs=);
+              "
+            ></div>
+            <article>
+              <h1>Fungsi Kuadrat</h1>
+              <p>
+                Fungsi kuadrat adalah fungsi polinomial derajat dua, ditulis
+                sebagai
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <mrow>
+                    <mi>f</mi>
+                    <mo>(</mo>
+                    <mi>x</mi>
+                    <mo>)</mo>
+                    <mo>=</mo>
+                    <msup>
+                      <mi>ax</mi>
+                      <mn>2</mn>
+                    </msup>
+                    <mo>+</mo>
+                    <mi>bx</mi>
+                    <mo>+</mo>
+                    <mn>c</mn>
+                  </mrow> </math
+                >, dengan a, b, dan c sebagai konstanta....
+              </p>
+              <span>Click to read more</span>
+            </article>
+          </a>
+        </div>
+        <div
+          class="item"
+          data-aos="fade-up"
+          data-aos-offset="250"
+          data-aos-duration="1000"
+          data-aos-delay="50"
+        >
+          <a
+            href="https://design.tutsplus.com/articles/envato-tuts-community-challenge-created-by-you-july-edition--cms-26724"
+            class="card"
+          >
+            <div
+              class="thumb"
+              style="
+                background-image: url(https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWF0aGVtYXRpY3MlMjBjdWJpa3xlbnwwfHwwfHx8MA%3D%3D);
+              "
+            ></div>
+            <article>
+              <h1>Fungsi Kubik</h1>
+              <p>
+                Fungsi kubik adalah jenis fungsi polinomial dengan derajat tiga,
+                ditulis sebagai
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <mrow>
+                    <mi>f</mi>
+                    <mo>(</mo>
+                    <mi>x</mi>
+                    <mo>)</mo>
+                    <mo>=</mo>
+                    <msup>
+                      <mi>ax</mi>
+                      <mn>3</mn>
+                    </msup>
+                    <mo>+</mo>
+                    <msup>
+                      <mi>bx</mi>
+                      <mn>2</mn>
+                    </msup>
+                    <mo>+</mo>
+                    <mi>cx</mi>
+                    <mo>+</mo>
+                    <mn>d</mn>
+                  </mrow> </math
+                >, di mana a, b, c, dan d adalah konstanta....
+              </p>
+              <span>Click to read more</span>
+            </article>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- blog section end -->
+
     <!-- our team start -->
     <section class="team-section wrap" id="team">
       <p>OUR TEAM</p>
@@ -235,7 +416,7 @@
       <div class="personal-section">
         <div class="personal" data-aos="flip-left" data-aos-duration="1000">
           <img src="{{ url_for('static', filename='img/Mask.png') }}" alt="" />
-          <h2>Adam</h2>
+          <h2>Khalisa Salsabila Putri</h2>
           <h4>Developer</h4>
           <div class="social">
             <img src="{{ url_for('static', filename='img/tw.png') }}" alt="" />
@@ -244,7 +425,7 @@
         </div>
         <div class="personal" data-aos="flip-left" data-aos-duration="1500">
           <img src="{{ url_for('static', filename='img/Mask.png') }}" alt="" />
-          <h2>El Gato</h2>
+          <h2>Muhamad Raihan Nurhidayat</h2>
           <h4>Developer</h4>
           <div class="social">
             <img src="{{ url_for('static', filename='img/tw.png') }}" alt="" />
@@ -253,7 +434,7 @@
         </div>
         <div class="personal" data-aos="flip-left" data-aos-duration="2000">
           <img src="{{ url_for('static', filename='img/Mask.png') }}" alt="" />
-          <h2>Wilson</h2>
+          <h2>Mohamad Raihan Adriyansyah</h2>
           <h4>Developer</h4>
           <div class="social">
             <img src="{{ url_for('static', filename='img/tw.png') }}" alt="" />
@@ -264,14 +445,43 @@
     </section>
     <!-- our team end -->
 
+    <!-- footer start -->
+    <footer>
+      <div class="footer">
+        <div class="row">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#service">Our Services</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#team">Our Team</a></li>
+          </ul>
+        </div>
+
+        <div class="row">
+          Mathexlab Copyright © 2023 Mathexlab - All rights
+          reserved || Designed By: Kelompok 8
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
     <script src="{{ url_for('static', filename='js/script.js')}}"></script>
     <script src="../js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
     <script>
-      gsap.registerPlugin(TextPlugin)
-      gsap.from(".header", {duration: 1.5, y : -100, opacity:0,ease:"bounce"})
-      gsap.to(".desc", {duration: 3, delay: 1.5, text: 'Our goal is solve your problem math in grap and easy to access and also easy to used'})
+      gsap.registerPlugin(TextPlugin);
+      gsap.from(".header", {
+        duration: 1.5,
+        y: -100,
+        opacity: 0,
+        ease: "bounce",
+      });
+      gsap.to(".desc", {
+        duration: 3,
+        delay: 1.5,
+        text: "Our goal is solve your problem math in grap and easy to access and also easy to used",
+      });
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

@@ -169,7 +169,7 @@ a {
 .team-section {
     margin-top: 32px;
     height: auto;
-    margin-bottom: 24px;
+    margin-bottom: 120px;
 }
 
 .team-section p {
@@ -219,8 +219,8 @@ a {
 .personal h2 {
     color: #1E0E62;
     margin: 12px 0;
-    /* Heading / H5 Lead */
-    font-size: 22px;
+    text-align: center;
+    font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: 32px;

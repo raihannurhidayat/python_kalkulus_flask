@@ -12,6 +12,14 @@ app = Flask(__name__)
 def hello():
     return render_template('home.html')
 
+@app.route('/blog/linear')
+def blogLinear():
+    return render_template('bloglinear.html')
+
+@app.route('/blog/kuadrat')
+def blogKuadrat():
+    return render_template('blogkuadrat.html')
+
 @app.route('/graph')
 def graph():
     return render_template('graph.html')
