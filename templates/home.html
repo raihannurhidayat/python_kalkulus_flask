@@ -30,6 +30,10 @@
       href="{{ url_for('static', filename='css/footer.css') }}"
     />
     <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/tech.css') }}"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
@@ -138,6 +142,7 @@
           data-aos="fade-up"
           data-aos-delay="500"
           data-aos-offset="50"
+          href="#service"
           >Get Started</a
         >
       </div>
@@ -151,6 +156,36 @@
       </div>
     </section>
     <!-- hero section end -->
+
+    <!-- tech section start -->
+    <section class="tech-section" id="tech">
+      <div class="tech-wrap wrap">
+        <h1>Tech Stack</h1>
+        <div class="tech-container">
+          <div class="tech" data-aos="flip-left" data-aos-duration="1000">
+            <img src="{{ url_for('static', filename='img/htmldark.png') }}" alt="">
+            <h4>HTML</h4>
+          </div>
+          <div class="tech" data-aos="flip-left" data-aos-duration="1000">
+            <img src="{{ url_for('static', filename='img/cssdark.png') }}" alt="">
+            <h4>CSS</h4>
+          </div>
+          <div class="tech" data-aos="flip-left" data-aos-duration="1000">
+            <img src="{{ url_for('static', filename='img/jsdark.png') }}" alt="">
+            <h4>Javascript</h4>
+          </div>
+          <div class="tech" data-aos="flip-left" data-aos-duration="1000">
+            <img src="{{ url_for('static', filename='img/flask.png') }}" alt="">
+            <h4>Flask</h4>
+          </div>
+          <div class="tech" data-aos="flip-left" data-aos-duration="1000">
+            <img src="{{ url_for('static', filename='img/pythondark.png') }}" alt="">
+            <h4>Python</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- tech section end -->
 
     <!-- service section start -->
     <section class="service-section wrap" id="service">
@@ -413,13 +448,6 @@
     <!-- footer start -->
     <footer>
       <div class="footer">
-        <!-- <div class="row">
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-instagram"></i></a>
-          <a href="#"><i class="fa fa-youtube"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a>
-        </div> -->
-
         <div class="row">
           <ul>
             <li><a href="#home">Home</a></li>
