@@ -15,6 +15,10 @@
     />
     <link
       rel="stylesheet"
+      href="{{ url_for('static', filename='css/contact.css') }}"
+    />
+    <link
+      rel="stylesheet"
       href="{{ url_for('static', filename='css/responsif.css') }}"
     />
     <link
@@ -122,7 +126,7 @@
 
             <li><a href="#team" class="nav__link">Our Team</a></li>
 
-            <li><a href="#" class="nav__link">Contact</a></li>
+            <li><a href="#contact" class="nav__link">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -163,23 +167,38 @@
         <h1>Tech Stack</h1>
         <div class="tech-container">
           <div class="tech" data-aos="flip-left" data-aos-duration="1000">
-            <img src="{{ url_for('static', filename='img/htmldark.png') }}" alt="">
+            <img
+              src="{{ url_for('static', filename='img/htmldark.png') }}"
+              alt=""
+            />
             <h4>HTML</h4>
           </div>
           <div class="tech" data-aos="flip-left" data-aos-duration="1000">
-            <img src="{{ url_for('static', filename='img/cssdark.png') }}" alt="">
+            <img
+              src="{{ url_for('static', filename='img/cssdark.png') }}"
+              alt=""
+            />
             <h4>CSS</h4>
           </div>
           <div class="tech" data-aos="flip-left" data-aos-duration="1000">
-            <img src="{{ url_for('static', filename='img/jsdark.png') }}" alt="">
+            <img
+              src="{{ url_for('static', filename='img/jsdark.png') }}"
+              alt=""
+            />
             <h4>Javascript</h4>
           </div>
           <div class="tech" data-aos="flip-left" data-aos-duration="1000">
-            <img src="{{ url_for('static', filename='img/flask.png') }}" alt="">
+            <img
+              src="{{ url_for('static', filename='img/flask.png') }}"
+              alt=""
+            />
             <h4>Flask</h4>
           </div>
           <div class="tech" data-aos="flip-left" data-aos-duration="1000">
-            <img src="{{ url_for('static', filename='img/pythondark.png') }}" alt="">
+            <img
+              src="{{ url_for('static', filename='img/pythondark.png') }}"
+              alt=""
+            />
             <h4>Python</h4>
           </div>
         </div>
@@ -291,10 +310,7 @@
           data-aos-duration="1000"
           data-aos-delay="50"
         >
-          <a
-            href="/blog/linear"
-            class="card"
-          >
+          <a href="/blog/linear" class="card">
             <div
               class="thumb"
               style="
@@ -319,10 +335,7 @@
           data-aos-duration="1000"
           data-aos-delay="50"
         >
-          <a
-            href="/blog/kuadrat"
-            class="card"
-          >
+          <a href="/blog/kuadrat" class="card">
             <div
               class="thumb"
               style="
@@ -445,6 +458,27 @@
     </section>
     <!-- our team end -->
 
+    <!-- contact start -->
+    <section id="contact" class="contact-section">
+      <h1>Contact Us</h1>
+      <div class="wrap-contact">
+        <form action="" class="contact-form">
+          <label for="contact-name">Name</label>
+          <input type="text" name="contact-name" id="contact-name" />
+          <label for="contact-gmail">gmail</label>
+          <input type="text" name="contact-gmail" id="contact-gmail" />
+          <label for="">Message</label>
+          <textarea
+            name="contact-message"
+            id="contact-message"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </form>
+      </div>
+    </section>
+    <!-- contact end -->
+
     <!-- footer start -->
     <footer>
       <div class="footer">
@@ -458,8 +492,8 @@
         </div>
 
         <div class="row">
-          Mathexlab Copyright © 2023 Mathexlab - All rights
-          reserved || Designed By: Kelompok 8
+          Mathexlab Copyright © 2023 Mathexlab - All rights reserved || Designed
+          By: Kelompok 8
         </div>
       </div>
     </footer>
