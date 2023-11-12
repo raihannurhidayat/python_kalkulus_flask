@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mathexlab</title>
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='img/title.png') }}"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/navbar.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/blogkubik.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/footer.css') }}"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- navbar start -->
+    <header class="header">
+      <nav class="nav container">
+        <div class="nav__data">
+          <a href="#" class="nav__logo">
+            <i class="ri-graduation-cap-fill"></i> Mathexlab
+          </a>
+
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__burger"></i>
+            <i class="ri-close-line nav__close"></i>
+          </div>
+        </div>
+
+        <!--=============== NAV MENU ===============-->
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="/" class="nav__link">Home</a></li>
+            <!--=============== DROPDOWN 1 ===============-->
+
+            <li class="dropdown__item">
+              <div class="nav__link">
+                <a href="#service" style="color: black">Service</a>
+                <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="/linear" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>linear
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/kuadrat" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>Kuadrat
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/kubik" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>Kubik
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="dropdown__item">
+              <div class="nav__link">
+                <a href="#blog" style="color: black">Blog</a>
+                <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="/blog/linear" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>Fungsi linear
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/blog/kuadrat" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>Fungsi Kuadrat
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/blog/kubik" class="dropdown__link">
+                    <i class="ri-line-chart-fill"></i>Fungsi Kubik
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- navbar end -->
+
+    <div class="hero-image"></div>
+
+    <!-- section blog start -->
+    <section class="wrap blog-section">
+      <div class="container-blog">
+        <br />
+        <h1>Fungsi Kubik</h1>
+        <br />
+        <p>
+          Fungsi kubik merupakan fungsi polinomial berderajat 3. Jadi grafik
+          fungsi kubus dapat mempunyai maksimal 3 akar. yaitu, ia dapat memotong
+          sumbu x maksimal pada 3 titik. Karena akar kompleks selalu
+          berpasangan, fungsi kubik selalu mempunyai 1 atau 3 angka nol real.
+          Tidak boleh ada 2 angka nol yang sebenarnya.
+        </p>
+        <br />
+        <p>
+          Mari kita pelajari lebih lanjut tentang fungsi kubik beserta
+          domainnya, jangkauannya, dan proses pembuatan grafiknya. Mari kita
+          pelajari juga cara mencari titik kritis dan titik belok fungsi kubus
+          dan lihat juga perilaku akhirnya.
+        </p>
+        <br />
+        <p><b>Apa itu Fungsi Kubik?</b></p>
+        <br />
+        <p>
+          Fungsi kubik adalah fungsi polinomial berderajat 3 dan berbentuk
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mrow>
+              <mi>f</mi>
+              <mo>(</mo>
+              <mi>x</mi>
+              <mo>)</mo>
+              <mo>=</mo>
+              <msup>
+                <mi>ax</mi>
+                <mn>3</mn>
+              </msup>
+              <mo>+</mo>
+              <msup>
+                <mi>bx</mi>
+                <mn>2</mn>
+              </msup>
+              <mo>+</mo>
+              <mi>cx</mi>
+              <mo>+</mo>
+              <mn>d</mn>
+            </mrow> </math
+          >, dengan a, b, c, dan d adalah bilangan real dan a ≠ 0. Fungsi kubik
+          dasar fungsi (yang juga dikenal sebagai fungsi kubus induk) adalah
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mrow>
+              <mi>f</mi>
+              <mo>(</mo>
+              <mi>x</mi>
+              <mo>)</mo>
+              <mo>=</mo>
+              <msup>
+                <mi>ax</mi>
+                <mn>3</mn>
+              </msup>
+            </mrow> </math
+          >. Karena fungsi kubik melibatkan polinomial berderajat ganjil, maka
+          fungsi tersebut mempunyai paling sedikit satu akar real. Misalnya,
+          hanya ada satu bilangan real yang memenuhi
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mrow>
+              <msup>
+                <mi>ax</mi>
+                <mn>3</mn>
+              </msup>
+            </mrow> </math
+          >= 0 (yaitu x = 0) sehingga fungsi kubik
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mrow>
+              <mi>f</mi>
+              <mo>(</mo>
+              <mi>x</mi>
+              <mo>)</mo>
+              <mo>=</mo>
+              <msup>
+                <mi>ax</mi>
+                <mn>3</mn>
+              </msup>
+            </mrow>
+          </math>
+          hanya mempunyai satu akar real (dua akar lainnya adalah bilangan
+          kompleks). Berikut beberapa contoh fungsi kubik.
+        </p>
+        <img
+          src="{{ url_for('static', filename='img/bloggrafik1kubik.png') }}"
+          alt=""
+          style="width: 80%"
+        />
+        <br />
+        <br />
+        <p>
+          <b>Asimtot Fungsi Kubus</b>
+        </p>
+        <br />
+        <p>
+          Asimtotnya selalu sesuai dengan nilai yang dikecualikan dari domain
+          dan rentang . Karena domain dan rentang fungsi kubik adalah himpunan
+          semua bilangan real, tidak ada nilai yang dikecualikan dari domain
+          atau rentang tersebut. Oleh karena itu, fungsi kubik tidak memiliki
+          asimtot vertikal maupun asimtot horizontal .
+        </p>
+        <br />
+        <p>
+          <b>Perpotongan X Fungsi Kubik</b>
+        </p>
+        <br />
+        <p>
+          Perpotongan x suatu fungsi juga dikenal sebagai akar (atau) nol.
+          Karena derajat fungsi kubik adalah 3, maka fungsi tersebut dapat
+          memiliki maksimal 3 akar. Karena akar kompleks dari suatu fungsi
+          selalu berpasangan, suatu fungsi akan selalu memiliki 0, 2, 4, ...
+          akar kompleks. Jadi suatu fungsi bisa mempunyai 0 atau dua akar
+          kompleks. Jadi, ia mempunyai satu atau tiga akar real atau titik
+          potong x.
+          <b
+            >Untuk mencari titik potong x suatu fungsi kubik, kita cukup
+            mensubstitusikan y = 0 (atau f(x) = 0) dan mencari nilai x.</b
+          >
+        </p>
+        <br />
+        <img
+          style="width: 70%"
+          src="{{ url_for('static', filename='img/kubik1.png')}}"
+          alt=""
+        />
+        <br />
+        <p>
+          Bilangan kompleks tidak bisa berupa titik potong x. Oleh karena itu,
+          f(x) hanya memiliki satu titik potong x yaitu (4, 0).
+        </p>
+        <br />
+        <p>
+          <b>Y-Intercept Fungsi Kubik</b>
+        </p>
+        <br />
+        <p>
+          Fungsi kubik selalu memiliki tepat satu titik potong y.
+          <b
+            >Untuk menemukan titik potong y dari fungsi kubik, kita cukup
+            mengganti x = 0 dan mencari nilai y</b
+          >.
+        </p>
+        <br />
+        <p>
+          Contoh: Untuk mencari titik potong y dari
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mrow>
+              <mi>f</mi>
+              <mo>(</mo>
+              <mi>x</mi>
+              <mo>)</mo>
+              <mo>=</mo>
+              <msup>
+                <mi>x</mi>
+                <mn>3</mn>
+              </msup>
+              <mo>-</mo>
+              <msup>
+                <mi>4x</mi>
+                <mn>2</mn>
+              </msup>
+              <mo>+</mo>
+              <mi>x</mi>
+              <mo>-</mo>
+              <mn>4</mn>
+            </mrow> </math
+          >, substitusi x = 0. Maka
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mrow>
+              <mi>f</mi>
+              <mo>(</mo>
+              <mi>x</mi>
+              <mo>)</mo>
+              <mo>=</mo>
+              <msup>
+                <mi>0</mi>
+                <mn>3</mn>
+              </msup>
+              <mo>-</mo>
+              <msup>
+                <mi>4(0)</mi>
+                <mn>2</mn>
+              </msup>
+              <mo>+</mo>
+              <mi>0</mi>
+              <mo>-</mo>
+              <mn>4</mn>
+            </mrow> </math
+          >. Oleh karena itu, titik potong y dari fungsi ini adalah (0, -4).
+        </p>
+      </div>
+    </section>
+
+    <!-- section blog end -->
+
+    <!-- footer start -->
+    <footer>
+      <div class="footer">
+        <div class="row">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#service">Our Services</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#team">Our Team</a></li>
+          </ul>
+        </div>
+
+        <div class="row">
+          Mathexlab Copyright © 2023 Mathexlab - All rights reserved || Designed
+          By: Kelompok 8
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+    <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+  </body>
+</html>

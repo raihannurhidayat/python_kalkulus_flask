@@ -16,6 +16,10 @@ def hello():
 def blogLinear():
     return render_template('bloglinear.html')
 
+@app.route('/blog/kubik')
+def blogkubik():
+    return render_template('blogkubik.html')
+
 @app.route('/blog/kuadrat')
 def blogKuadrat():
     return render_template('blogkuadrat.html')
