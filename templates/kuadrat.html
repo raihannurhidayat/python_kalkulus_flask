@@ -13,6 +13,10 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/navbar.css') }}"
     />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/kubik.css') }}"
+    />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
   </head>
 
@@ -95,20 +99,32 @@
       </nav>
     </header>
     <!-- navbar end -->
-    <h1>Menggambar fungsi kuadrat</h1>
-    <div style="margin-top: 120px;">
-      <form action="/kuadrat" method="POST" id="myForm">
-        Nilai a <input type="number" name="nilai_a" required />
-        <br />
-        Nilai b <input type="number" name="nilai_b" required />
-        <br />
-        Nilai c <input type="number" name="nilai_c" required />
-        <br />
-        <br />
-        <input type="submit" value="OK" />
-        <input type="button" onclick="reset()" value="reset" />
-      </form>
+    <div class="title wrap-title">
+      <h1>
+        Menggambar Fungsi Kuadrat
+      </h1>
     </div>
+    <div class="form wrap">
+      <form action="/kuadrat" method="POST" id="myForm">
+          <div class="input-form">
+              <label for="">Nilai a</label>
+              <input type="number" name="nilai_a" required />
+          </div>
+          <div class="input-form">
+              <label for="">Nilai b</label>
+              <input type="number" name="nilai_b" required />
+          </div>
+          <div class="input-form">
+              <label for="">Nilai c</label>
+              <input type="number" name="nilai_c" required />
+          </div>
+          <br />
+          <div class="action">
+              <input class="submit" type="submit" value="Ok" />
+              <input class="reset" type="button" onclick="reset()" value="Reset" />
+          </div>
+      </form>
+  </div>
 
     {% if plot_url %}
     <div
@@ -120,19 +136,18 @@
       "
     >
       <img
-        style="background-color: tomato; text-align: center"
+        style="background-color: tomato; text-align: center;"
         src="{{plot_url}}"
         alt="Chart error"
       />
-      <p>hello</p>
     </div>
     {% endif %} {%if data%}
-    <table>
+    <table class="table">
       <th>Titik Potong submu X</th>
       <th>Titik Potong submu Y</th>
       <th>Titik Maksimum</th>
       <tr>
-        <td>( {{data[0]}}, {{data[1]}})</td>
+        <td>({{data[0]}}, 0), ({{data[1]}}, 0)</td>
         <td>( 0, {{data[2]}} )</td>
         <td>( {{data[3]}}, {{data[4]}} )</td>
       </tr>
