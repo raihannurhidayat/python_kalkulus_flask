@@ -211,6 +211,7 @@ a {
 }
 
 .personal img {
+    border-radius: 100%;
     width: 120px;
     height: 120px;
     margin-top: 32px;

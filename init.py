@@ -169,9 +169,6 @@ def kubik():
             return x1, x2, x3, y1
 
         akar1, akar2, akar3, y1 = solve_cubic(a, b, c, d)
-        print("Akar pertama:", akar1)
-        print("Akar kedua:", akar2)
-        print("Akar ketiga:", akar3)
 
         data = [akar1, akar2, akar3, y1]
 
