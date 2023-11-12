@@ -105,7 +105,7 @@ def kuadrat():
         y0 = 0
         y1 = 0
 
-        data = [x1,x2,ty,xm,ym]
+        data = [int(x1),int(x2),int(ty),int(xm),int(ym)]
 
         plt.plot(x,y, "r")
         plt.plot([x1, x2], [y0, y1], "k*", label="Titik Potong Sumbu x")
