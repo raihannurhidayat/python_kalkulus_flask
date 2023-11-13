@@ -105,7 +105,7 @@ def kuadrat():
         y0 = 0
         y1 = 0
 
-        data = [int(x1),int(x2),int(ty),int(xm),int(ym)]
+        data = [x1,x2,ty,xm,ym]
 
         plt.plot(x,y, "r")
         plt.plot([x1, x2], [y0, y1], "k*", label="Titik Potong Sumbu x")
@@ -170,6 +170,7 @@ def kubik():
 
         akar1, akar2, akar3, y1 = solve_cubic(a, b, c, d)
 
+        inputUser = [int(a),int(b),int(c),int(d)]
         data = [akar1, akar2, akar3, y1]
 
         x = np.arange(-10, 10, 0.01)
@@ -198,7 +199,7 @@ def kubik():
 
         plt.savefig('static/kubik.png')
         plt.clf()
-        return render_template('kubik.html', plot_url='static/kubik.png', data = data)
+        return render_template('kubik.html', plot_url='static/kubik.png', data = data, inputUser = inputUser)
     else:
         return render_template('kubik.html')
     

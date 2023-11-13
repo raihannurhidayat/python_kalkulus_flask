@@ -105,6 +105,62 @@
     <div class="title wrap-title">
       <h1>Menggambar fungsi kubik</h1>
     </div>
+    <section
+      style="
+        min-width: 300px;
+        height: auto;
+        padding: 24px 32px;
+        background-color: #fff;
+        margin-bottom: 32px;
+      "
+      class="wrap"
+    >
+      <div>
+        <h3>Cara Penggunaan:</h3>
+        <ul>
+          <li style="list-style: disc">
+            <span>Masukan Angka Pada inputan yang tersedia</span>
+          </li>
+          <li style="list-style: disc">
+            <span>Tidak diperbolehkan memasukan angka pecahan</span>
+          </li>
+          <li style="list-style: disc">
+            <span>Tidak diperbolehkan memasukan angka desimal</span>
+          </li>
+          <li style="list-style: disc">
+            <span>Masukan nilai sesuai dengan persamaan umum fungsi kubik</span>
+          </li>
+          <li style="list-style: disc">
+            <span
+              ><math
+                xmlns="http://www.w3.org/1998/Math/MathML"
+              >
+                <mrow>
+                  <mi>f</mi>
+                  <mo>(</mo>
+                  <mi>x</mi>
+                  <mo>)</mo>
+                  <mo>=</mo>
+                  <msup>
+                    <mi>ax</mi>
+                    <mn>3</mn>
+                  </msup>
+                  <mo>+</mo>
+                  <msup>
+                    <mi>bx</mi>
+                    <mn>2</mn>
+                  </msup>
+                  <mo>+</mo>
+                  <mi>cx</mi>
+                  <mo>+</mo>
+                  <mn>d</mn>
+                </mrow>
+              </math></span
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
     <div class="form wrap">
       <form action="/kubik" method="POST" id="myForm">
         <div class="input-form">
@@ -132,6 +188,39 @@
     </div>
 
     {% if plot_url %}
+    <div style="width: 80%; margin: 32px auto">
+      <h3 style="text-align: center">Hasil inputan anda andalah :</h3>
+      <math
+        style="
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+        xmlns="http://www.w3.org/1998/Math/MathML"
+      >
+        <mrow>
+          <mi>f</mi>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+          <mo>=</mo>
+          <msup>
+            <mi>{{inputUser[0]}}x</mi>
+            <mn>3</mn>
+          </msup>
+          <mo>+</mo>
+          <msup>
+            <mi>{{inputUser[1]}}x</mi>
+            <mn>2</mn>
+          </msup>
+          <mo>+</mo>
+          <mi>{{inputUser[2]}}x</mi>
+          <mo>+</mo>
+          <mn>{{inputUser[3]}}</mn>
+        </mrow>
+      </math>
+    </div>
     <div
       style="
         display: flex;
@@ -148,9 +237,9 @@
       />
     </div>
     {% endif %} {%if data%}
-    <table class="table">
-      <th>Titik Potong submu X</th>
-      <th>Titik Potong submu Y</th>
+    <table class="table" style="width: 360px">
+      <th>Titik Potong sumbu X</th>
+      <th>Titik Potong sumbu Y</th>
       <tr>
         <td>({{data[0]}}, 0), ({{data[1]}}, 0), ({{data[2]}}, 0)</td>
         <td>( 0, {{data[3]}} )</td>

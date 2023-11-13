@@ -21,12 +21,12 @@ a {
 }
 
 .hero-section {
-    height: auto;
+    height: 92vh;
     margin-bottom: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 120px;
+    margin-top:120px;
 }
 
 .hero-text {

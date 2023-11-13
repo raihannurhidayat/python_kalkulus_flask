@@ -17,7 +17,10 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/kubik.css') }}"
     />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -88,7 +91,7 @@
                 </li>
 
                 <li>
-                  <a href="/kubik" class="dropdown__link">
+                  <a href="/blog/kubik" class="dropdown__link">
                     <i class="ri-line-chart-fill"></i>Fungsi Kubik
                   </a>
                 </li>
@@ -100,33 +103,108 @@
     </header>
     <!-- navbar end -->
     <div class="title wrap-title">
-      <h1>
-        Menggambar Fungsi Kuadrat
-      </h1>
+      <h1>Menggambar Fungsi Kuadrat</h1>
     </div>
+    <section
+      style="
+        min-width: 300px;
+        height: auto;
+        padding: 24px 32px;
+        background-color: #fff;
+        margin-bottom: 32px;
+      "
+      class="wrap"
+    >
+      <div>
+        <h3>Cara Penggunaan:</h3>
+        <ul>
+          <li style="list-style: disc">
+            <span>Masukan Angka Pada inputan yang tersedia</span>
+          </li>
+          <li style="list-style: disc">
+            <span>Tidak diperbolehkan memasukan angka pecahan</span>
+          </li>
+          <li style="list-style: disc">
+            <span>Tidak diperbolehkan memasukan angka desimal</span>
+          </li>
+          <li style="list-style: disc">
+            <span>Masukan nilai sesuai dengan persamaan umum fungsi kuadrat</span>
+          </li>
+          <li style="list-style: disc">
+            <span
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mrow>
+                  <mi>f</mi>
+                  <mo>(</mo>
+                  <mi>x</mi>
+                  <mo>)</mo>
+                  <mo>=</mo>
+                  <msup>
+                    <mi>ax</mi>
+                    <mn>2</mn>
+                  </msup>
+                  <mo>+</mo>
+                  <mi>bx</mi>
+                  <mo>+</mo>
+                  <mn>c</mn>
+                </mrow>
+              </math></span
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
     <div class="form wrap">
       <form action="/kuadrat" method="POST" id="myForm">
-          <div class="input-form">
-              <label for="">Nilai a</label>
-              <input type="number" name="nilai_a" required />
-          </div>
-          <div class="input-form">
-              <label for="">Nilai b</label>
-              <input type="number" name="nilai_b" required />
-          </div>
-          <div class="input-form">
-              <label for="">Nilai c</label>
-              <input type="number" name="nilai_c" required />
-          </div>
-          <br />
-          <div class="action">
-              <input class="submit" type="submit" value="Ok" />
-              <input class="reset" type="button" onclick="reset()" value="Reset" />
-          </div>
+        <div class="input-form">
+          <label for="">Nilai a</label>
+          <input type="number" name="nilai_a" required />
+        </div>
+        <div class="input-form">
+          <label for="">Nilai b</label>
+          <input type="number" name="nilai_b" required />
+        </div>
+        <div class="input-form">
+          <label for="">Nilai c</label>
+          <input type="number" name="nilai_c" required />
+        </div>
+        <br />
+        <div class="action">
+          <input class="submit" type="submit" value="Ok" />
+          <input class="reset" type="button" onclick="reset()" value="Reset" />
+        </div>
       </form>
-  </div>
+    </div>
 
     {% if plot_url %}
+    <div style="width: 80%; margin: 32px auto">
+      <h3 style="text-align: center">Hasil inputan anda andalah :</h3>
+      <math
+        style="
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+        xmlns="http://www.w3.org/1998/Math/MathML"
+      >
+        <mrow>
+          <mi>f</mi>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+          <mo>=</mo>
+          <msup>
+            <mi>ax</mi>
+            <mn>2</mn>
+          </msup>
+          <mo>+</mo>
+          <mi>bx</mi>
+          <mo>+</mo>
+          <mn>c</mn>
+        </mrow>
+      </math>
+    </div>
     <div
       style="
         display: flex;
@@ -136,16 +214,17 @@
       "
     >
       <img
-        style="background-color: tomato; text-align: center;"
+        class="plot_img"
+        style="background-color: tomato; text-align: center"
         src="{{plot_url}}"
         alt="Chart error"
       />
     </div>
     {% endif %} {%if data%}
-    <table class="table">
-      <th>Titik Potong submu X</th>
-      <th>Titik Potong submu Y</th>
-      <th>Titik Maksimum</th>
+    <table class="table"  style="width: 360px">
+      <th>Titik Potong sumbu X</th>
+      <th>Titik Potong sumbu Y</th>
+      <th>Titik Maksimum/Minimum</th>
       <tr>
         <td>({{data[0]}}, 0), ({{data[1]}}, 0)</td>
         <td>( 0, {{data[2]}} )</td>
