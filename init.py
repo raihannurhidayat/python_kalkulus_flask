@@ -106,6 +106,7 @@ def kuadrat():
         y1 = 0
 
         data = [x1,x2,ty,xm,ym]
+        inputUser = [int(a),int(b),int(c)]
 
         plt.plot(x,y, "r")
         plt.plot([x1, x2], [y0, y1], "k*", label="Titik Potong Sumbu x")
@@ -129,7 +130,7 @@ def kuadrat():
         plt.legend()
         plt.savefig('static/kuadrat.png')
         plt.clf()
-        return render_template('kuadrat.html', plot_url='static/kuadrat.png', data = data)
+        return render_template('kuadrat.html', plot_url='static/kuadrat.png', data = data, inputUser = inputUser)
     else:
         return render_template('kuadrat.html')
 
