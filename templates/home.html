@@ -376,10 +376,7 @@
           data-aos-duration="1000"
           data-aos-delay="50"
         >
-          <a
-            href="/blog/kubik"
-            class="card"
-          >
+          <a href="/blog/kubik" class="card">
             <div
               class="thumb"
               style="
@@ -461,19 +458,26 @@
     <!-- contact start -->
     <section id="contact" class="contact-section">
       <h1>Contact Us</h1>
-      <div class="wrap-contact">
-        <form action="" class="contact-form">
+      <div class="alert disable">
+        <h2>Thanks For Your Response</h2>
+      </div>
+        <form action="" class="contact-form" name="submit-to-google-sheet">
           <label for="contact-name">Name</label>
-          <input type="text" name="contact-name" id="contact-name" />
+          <input type="text" name="nama" id="contact-name" />
           <label for="contact-gmail">gmail</label>
-          <input type="text" name="contact-gmail" id="contact-gmail" />
+          <input type="text" name="gmail" id="contact-gmail" />
           <label for="">Message</label>
           <textarea
-            name="contact-message"
+            name="message"
             id="contact-message"
             cols="30"
             rows="10"
           ></textarea>
+          <div style="padding-top: 24px">
+            <button type="submit" class="contact-button">
+              Submit
+            </button>
+          </div>
         </form>
       </div>
     </section>
@@ -499,6 +503,21 @@
     </footer>
     <!-- footer end -->
 
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbzq-f48pIRyGbOkD-rEvoZyDQ9USG_RYo7PtHagvo8MCEUAX1bCwWS515hUGAPLNIeN3w/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const btnKirim = document.querySelector('.contact-button')
+      const alert = document.querySelector('.alert')
+      
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert.classList.remove('disable')  
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
     <script src="{{ url_for('static', filename='js/script.js')}}"></script>
     <script src="../js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
