@@ -62,7 +62,7 @@
 
 @media screen and (max-width: 640px) {
     .contact-form {
-        width: 400px;
-        /* margin: 0 auto; */
+        width: 300px;
+        margin: 0 auto;
     }
 }

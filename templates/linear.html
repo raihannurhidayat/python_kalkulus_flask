@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fungsi Linear</title>
     <link
       rel="shortcut icon"
       href="{{ url_for('static', filename='img/title.png') }}"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-</head>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/navbar.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/responsif.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/linear.css') }}"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <!-- navbar start -->
     <header class="header">
       <nav class="nav container">
@@ -93,38 +106,142 @@
       </nav>
     </header>
     <!-- navbar end -->
-    <h1>Menggambar fungsi linear</h1>
-    <form action="/linear" method="POST" id="myForm" class="form-linear">
-        Nilai a <input type="number" name="nilai_a" required>
-        <br>
-        Nilai b <input type="number" name="nilai_b" required>
-        <br>
-        <br>
-        <input type="submit" value="OK">
-        <input type="button" onclick="reset()" value="reset">
-    </form>
+    <div class="title wrap-title">
+      <h1>Menggambar Fungsi Linear</h1>
+    </div>
+    <section
+      style="
+        min-width: 300px;
+        height: auto;
+        padding: 24px 32px;
+        background-color: #fff;
+        margin-bottom: 32px;
+      "
+      class="wrap"
+    >
+      <div>
+        <h3>Cara Penggunaan:</h3>
+        <ul>
+          <li style="list-style: disc">
+            <span>Masukan Angka Pada inputan yang tersedia</span>
+          </li>
+          <li style="list-style: disc">
+            <span>Tidak diperbolehkan memasukan angka pecahan</span>
+          </li>
+          <li style="list-style: disc">
+            <span>Tidak diperbolehkan memasukan angka desimal</span>
+          </li>
+          <li style="list-style: disc">
+            <span
+              >Masukan nilai sesuai dengan persamaan umum fungsi Linear</span
+            >
+          </li>
+          <li style="list-style: disc">
+            <span
+              ><math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mrow>
+                  <mi>f</mi>
+                  <mo>(</mo>
+                  <mi>x</mi>
+                  <mo>)</mo>
+                  <mo>=</mo>
+                  <msup>
+                    <mi>ax</mi>
+                  </msup>
+                  <mo>+</mo>
+                  <mi>b</mi>
+                </mrow>
+              </math></span
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
 
+    <div class="form wrap">
+      <form action="/linear" method="POST" id="myForm">
+        <div class="input-form">
+          <label for="">Nilai a</label>
+          <input type="number" name="nilai_a" required />
+        </div>
+        <div class="input-form">
+          <label for="">Nilai b</label>
+          <input type="number" name="nilai_b" required />
+        </div>
+        <br />
+        <br />
+        <div class="action">
+          <input class="submit" type="submit" value="Ok" />
+          <input class="reset" type="button" onclick="reset()" value="Reset" />
+        </div>
+      </form>
+    </div>
 
     {% if plot_url %}
-    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-        <img style="background-color: tomato; text-align: center;" src={{plot_url}} alt="Chart error">
-        <p>hello</p>
+    <div style="width: 80%; margin: 32px auto">
+      <h3 style="text-align: center">Hasil inputan anda andalah :</h3>
+      <math
+        style="
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+        xmlns="http://www.w3.org/1998/Math/MathML"
+      >
+        <mrow>
+          <mi>f</mi>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+          <mo>=</mo>
+          <msup>
+            <mi>{{inputUser[0]}}x</mi>
+          </msup>
+          <mo>+</mo>
+          <mi>{{inputUser[1]}}</mi>
+        </mrow>
+      </math>
     </div>
-    {% endif %}
-
-    {% if data %}
-        <table>
-            <th>Titik Potong submu X</th>
-            <th>Titik Potong submu Y</th>
-            <tr>
-                <td>( {{data[0]}}, 0 )</td>
-                <td>( 0, {{data[1]}} )</td>
-            </tr>
-        </table>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <img
+        class="plot_img"
+        style="background-color: tomato; text-align: center"
+        src="{{plot_url}}"
+        alt="Chart error"
+      />
+    </div>
+    {% endif %} {% if data %}
+    <div
+      style="
+        min-width: 300px;
+        height: auto;
+        padding: 24px 32px;
+        background-color: #fff;
+        margin-bottom: 32px;
+      "
+      class="wrap"
+    >
+      <h2 style="padding: 24px 8px">Keterangan Dari Grafik Yang Anda Buat :</h2>
+      <ul>
+        <li style="list-style: disc">
+          Grafik memotong sumbu x di titik ({{data[0]}},0)
+        </li>
+        <li style="list-style: disc">
+          Grafik memotong sumbu y di titik (0, {{data[1]}})
+        </li>
+      </ul>
+    </div>
     {%endif%}
 
     <script src="../js/script.js"></script>
     <script src="{{ url_for('static', filename='js/script.js')}}"></script>
-</body>
-
+  </body>
 </html>

@@ -1,0 +1,143 @@
+.option-navbar-section ul{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.option-navbar-section ul li{
+  list-style: none;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.option-navbar-section ul li a{
+  font-size: 25px;
+  color:rgb(255, 255, 255);
+
+}
+
+.option-navbar-section ul li a:hover{
+  color:rgb(9, 13, 255);
+  transition: .2s ease-in-out;
+}
+/*Header End*/
+
+
+
+/*Input Nilai Start*/
+
+.wrap {
+  margin: 32px 150px;
+}
+.wrap-title {
+  margin: 32px 150px;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.title {
+  margin-top: 90px;
+ 
+}
+
+.title h1 {
+  text-align: center;
+  letter-spacing: 4px;
+  font-size: 32px;
+}
+.form {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.form form {
+  box-shadow: 0px 2.76726px 2.21381px 0px rgba(0, 0, 0, 0.02), 0px 6.6501px 5.32008px 0px rgba(0, 0, 0, 0.03), 0px 12.52155px 10.01724px 0px rgba(0, 0, 0, 0.04), 0px 22.33631px 17.86905px 0px rgba(0, 0, 0, 0.04), 0px 41.77761px 33.42209px 0px rgba(0, 0, 0, 0.05), 0px 100px 80px 0px rgba(0, 0, 0, 0.07);
+  margin: 0 auto;
+  background-color: white;
+  padding: 24px 12px;
+  border: 2px solid black;
+  border-radius: 12px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-form {
+  margin: 12px 0;
+}
+
+.input-form label {
+  font-size: 18px;
+  margin-right: 12PX;
+}
+
+.input-form input {
+  padding: 2px;
+  border-radius: 2px;
+}
+
+.action {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.action .submit{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.action .submit,
+.action .reset {
+  width: 40%;
+  padding: 8px 12px;
+  border-radius: 7px;
+  background-color: rgb(255, 76, 76);
+}
+
+.action .reset:hover{
+  background-color: rgb(146, 0, 0);
+}
+
+.action .submit:active{
+  background-color: red;
+}
+
+.action .submit {
+  background-color: rgb(0, 255, 0);
+}
+
+.action .submit:hover {
+  background-color: rgba(0, 184, 0, 0.774)
+}
+
+.action .submit:active {
+  background-color: rgba(87, 255, 87, 0.774)
+}
+
+.reset:hover {
+  opacity: 0.7;
+}
+
+
+@media screen and (max-width: 750px) {
+  .table {
+      width: 80%;
+      margin: 12px 42px;
+  }
+  .wrap {
+      margin: 0;
+  }
+
+  .wrap-title {
+      margin: 70px 12px;
+  }
+
+  .form {
+      width: 100%;
+  }
+  .plot_img {
+      width: 80%;
+  }
+}
+
+/*Input Nilai End*/

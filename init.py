@@ -43,6 +43,8 @@ def linear():
 
         data = [x1, y1]
 
+        inputUser = [int(x1), int(y1)]
+
         plt.plot(x,y, "r")
         plt.plot(x1, 0, "k*", label=f"Titik Potong Sumbu x ")
         plt.plot(0, y1, "c*", label=f"Titik Potong Sumbu y ")
@@ -63,7 +65,7 @@ def linear():
         plt.legend()
         plt.savefig(f'static/my_plot.png')
         plt.clf()
-        return render_template('linear.html', plot_url=f'static/my_plot.png', data = data)
+        return render_template('linear.html', plot_url=f'static/my_plot.png', data = data, inputUser = inputUser)
     else:
         return render_template('linear.html')
 
@@ -105,9 +107,6 @@ def kuadrat():
         y0 = 0
         y1 = 0
 
-        data = [x1,x2,ty,xm,ym]
-        inputUser = [int(a),int(b),int(c)]
-
         plt.plot(x,y, "r")
         plt.plot([x1, x2], [y0, y1], "k*", label="Titik Potong Sumbu x")
         plt.plot(0, ty, "c*", label="Titik Potong Sumbu y")
@@ -130,6 +129,9 @@ def kuadrat():
         plt.legend()
         plt.savefig('static/kuadrat.png')
         plt.clf()
+
+        data = [x1,x2,ty,xm,ym]
+        inputUser = [int(a),int(b),int(c)]
         return render_template('kuadrat.html', plot_url='static/kuadrat.png', data = data, inputUser = inputUser)
     else:
         return render_template('kuadrat.html')
@@ -171,8 +173,6 @@ def kubik():
 
         akar1, akar2, akar3, y1 = solve_cubic(a, b, c, d)
 
-        inputUser = [int(a),int(b),int(c),int(d)]
-        data = [akar1, akar2, akar3, y1]
 
         x = np.arange(-10, 10, 0.01)
         y = a*x**3 + b*x**2 + c*x + d
@@ -198,6 +198,8 @@ def kubik():
         ax.spines['top'].set_color('none')        
         plt.legend()
 
+        inputUser = [int(a),int(b),int(c),int(d)]
+        data = [akar1, akar2, akar3, y1]
         plt.savefig('static/kubik.png')
         plt.clf()
         return render_template('kubik.html', plot_url='static/kubik.png', data = data, inputUser = inputUser)
