@@ -35,27 +35,34 @@ def linear():
         a = int(request.form['nilai_a'])
         b = int(request.form['nilai_b'])
 
-        x = np.arange(-10, 10, 0.01)
-        y = a*x + b
-
         x1 = -b/a
         y1 = b
 
         data = [x1, y1]
 
-        inputUser = [int(x1), int(y1)]
+        inputUser = [int(a), int(b)]
+
+        jarak1 = -abs(x1)*2
+        jarak2 = abs(x1)*2
+        jaraky1 = -abs(y1)*2
+        jaraky2 = abs(y1)*2
+
+        x = np.arange(jarak1, jarak2, 0.01)
+        y = a*x + b
 
         plt.plot(x,y, "r")
         plt.plot(x1, 0, "k*", label=f"Titik Potong Sumbu x ")
         plt.plot(0, y1, "c*", label=f"Titik Potong Sumbu y ")
 
-        plt.xlim(-10, 10)
-        plt.ylim(-20, 20)
+        plt.ylim(jaraky1, jaraky2)
 
         plt.title(f"$y = {a}x + {b}$")
         plt.xlabel("sumbu x")
         plt.ylabel("sumbu y")
         plt.grid()
+
+        plt.text((x1+0.2),0.5,(x1,0))
+        plt.text(0.5,(y1+0.2),(0,y1))
 
         ax = plt.gca()
         ax.spines['left'].set_position(('data', 0))
@@ -89,8 +96,8 @@ def kuadrat():
             return x1, x2
 
         def titikMaxMin(a,b): # <- mencari titik maksimum atau minimum
-            xm = -b/2*a
-            ym = -D/4*a
+            xm = -b/(2*a)
+            ym = -D/(4*a)
             return xm, ym
 
         def titikPotongY(c): #<- mencari titik potong pada sumbu y
@@ -114,6 +121,11 @@ def kuadrat():
 
         plt.xlim(-10, 10)
         plt.ylim(-20, 20)
+        
+        plt.text((x1+0.2),0.5,(x1,0))
+        plt.text((x2-0.2),0.5,(x2,0))
+        plt.text(0.5,ty,(x2,0))
+        plt.text((xm),(ty-2),(x2,0))
 
         plt.xticks(np.arange(-10, 10, 1))
         plt.title(f"$y = {a}x^2 + {b}x + {c}$")

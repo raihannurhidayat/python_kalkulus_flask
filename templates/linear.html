@@ -158,6 +158,10 @@
       </div>
     </section>
 
+    {%if error %}
+    <h1>{{ error }}</h1>
+    {%endif%}
+
     <div class="form wrap">
       <form action="/linear" method="POST" id="myForm">
         <div class="input-form">
